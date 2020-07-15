@@ -14,6 +14,7 @@ public class 归并排序 {
     System.out.println(Arrays.toString(a));
   }
 
+//归并排序的递归实现
   public static void Merge(int[] array, int low, int high) {
     if(low>=high)return;
     int mid = (low+high)>>1;

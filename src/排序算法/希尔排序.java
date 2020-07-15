@@ -8,7 +8,7 @@ import java.util.Arrays;
  */
 public class 希尔排序 {
   public static void main(String[] args) {
-    int[] a = {1,10,8,9,2,6,4};
+    int[] a = {1,10,8,9,2,6,4,12};
     ShellSort(a);
     System.out.println(Arrays.toString(a));
   }

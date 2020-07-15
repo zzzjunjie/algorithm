@@ -9,7 +9,8 @@ import java.util.Arrays;
 public class 快速排序 {
   public static void main(String[] args) {
     int[] a = {1,10,8,9,2,6,4};
-    a = QuickSort(a,0,a.length-1);
+//    a = QuickSort(a,0,a.length-1);
+    quickSort(a,0,a.length-1);
     System.out.println(Arrays.toString(a));
   }
 

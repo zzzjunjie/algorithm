@@ -9,9 +9,55 @@ import java.util.Arrays;
 public class 归并排序 {
   public static void main(String[] args) {
     int[] a = {1,10,8,9,2,6,4};
-    MergeSort(a);
+//    MergeSort(a);
+    int mid = a.length>>1;
+    Merge(a,0,mid,a.length-1);
     System.out.println(Arrays.toString(a));
   }
+
+  public static void Merge(int[] array, int low, int mid, int high) {
+    if(low>=high)return;
+    int i=low;//第一段扫描下标
+    int j=mid+1;//第二段扫描下标
+    int[] array2 = new int[high-low+1];//临时数组
+    int k=0;//临时数组下标
+    // 扫描第一段和第二段序列，直到有一个扫描结束
+
+    Merge(array,i,(i+mid)>>1,mid);
+    Merge(array,j,(j+high)>>1,high);
+
+    while (i<=mid && j <=high){
+      // 判断第一段和第二段取出的数哪个更小，将其存入合并序列，并继续向下扫描
+      if(array[i]<=array[j]){
+        array2[k]=array[i];
+        i++;
+        k++;
+      }else {
+        array2[k]=array[j];
+        j++;
+        k++;
+      }
+    }
+
+    //如果是左边没扫描完，把左边剩余的元素插入临时数组
+    while (i<=mid){
+      array2[k]=array[i];
+      k++;
+      i++;
+    }
+    //如果是右边没扫描完，把右边剩余的元素插入临时数组
+    while (j<=high){
+      array2[k]=array[j];
+      k++;
+      j++;
+    }
+
+    // 将合并序列复制到原始序列中
+    for (k = 0, i = low; i <= high; i++, k++) {
+      array[i] = array2[k];
+    }
+  }
+  //-------------------------------------------------------------------------------------------------
   /**
    * 归并排序
    *

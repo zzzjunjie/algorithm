@@ -1,5 +1,7 @@
 package 初级;
 
+import java.util.Scanner;
+
 /**
  * @author zhou
  * @date 2020/8/17 0:27

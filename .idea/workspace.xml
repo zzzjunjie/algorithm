@@ -19,14 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6780e67c-fb66-4df3-87c1-f1dc321f758d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/树/BFS算法.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/树/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/树/节点/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/树/N叉树的遍历.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/树/N叉树的遍历.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/树/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/树/节点/TreeNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/树/平衡二叉树.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/树/平衡二叉树.java" afterDir="false" />
+    <list default="true" id="6780e67c-fb66-4df3-87c1-f1dc321f758d" name="Default Changelist" comment="新增BFS算法">
+      <change afterPath="$PROJECT_DIR$/.idea/smartfox_info.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +198,7 @@
       <workItem from="1606492254589" duration="2505000" />
       <workItem from="1607244862199" duration="74000" />
       <workItem from="1608618750734" duration="1253000" />
-      <workItem from="1608638866561" duration="706000" />
+      <workItem from="1608638866561" duration="1025000" />
     </task>
     <task id="LOCAL-00001" summary="初级算法提交">
       <created>1597670117882</created>
@@ -220,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606492335881</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="新增BFS算法">
+      <created>1608639889418</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1608639889418</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,7 +242,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="初级算法提交" />
     <MESSAGE value="添加交换配对算法、魔术索引算法" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加交换配对算法、魔术索引算法" />
+    <MESSAGE value="新增BFS算法" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增BFS算法" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2693" y="252" key="#com.intellij.ide.util.MemberChooser" timestamp="1608639367143">
@@ -306,6 +308,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="502" y="249" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1040@0.0.1920.1040" timestamp="1606493646768" />
+    <state x="2536" y="240" key="run.anything.popup" timestamp="1608639789091">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2536" y="240" key="run.anything.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1608639789091" />
     <state x="2545" y="235" width="672" height="586" key="search.everywhere.popup" timestamp="1608639604789">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>

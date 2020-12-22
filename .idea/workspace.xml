@@ -20,13 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6780e67c-fb66-4df3-87c1-f1dc321f758d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/树/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/树/N叉树的遍历.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/树/TreeNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/树/平衡二叉树.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/树/BFS算法.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/树/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/树/节点/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/树/N叉树的遍历.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/树/N叉树的遍历.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/树/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/树/节点/TreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/树/平衡二叉树.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/树/平衡二叉树.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +68,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="ignore_missing_gitignore" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/初级" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -162,13 +163,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -201,6 +204,7 @@
       <workItem from="1606492254589" duration="2505000" />
       <workItem from="1607244862199" duration="74000" />
       <workItem from="1608618750734" duration="1253000" />
+      <workItem from="1608638866561" duration="706000" />
     </task>
     <task id="LOCAL-00001" summary="初级算法提交">
       <created>1597670117882</created>
@@ -240,9 +244,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="添加交换配对算法、魔术索引算法" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="773" y="291" key="#com.intellij.ide.util.MemberChooser" timestamp="1608622391610">
-      <screen x="0" y="0" width="1920" height="1200" />
+    <state x="2693" y="252" key="#com.intellij.ide.util.MemberChooser" timestamp="1608639367143">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
+    <state x="2693" y="252" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1608639367143" />
     <state x="773" y="291" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1200@0.0.1920.1200" timestamp="1608622391610" />
     <state x="706" y="462" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1608622291374">
       <screen x="0" y="0" width="1920" height="1200" />
@@ -301,9 +306,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="502" y="249" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1040@0.0.1920.1040" timestamp="1606493646768" />
-    <state x="625" y="271" width="670" height="676" key="search.everywhere.popup" timestamp="1608625772108">
-      <screen x="0" y="0" width="1920" height="1200" />
+    <state x="2545" y="235" width="672" height="586" key="search.everywhere.popup" timestamp="1608639604789">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
+    <state x="2545" y="235" width="672" height="586" key="search.everywhere.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1608639604789" />
     <state x="625" y="271" width="670" height="676" key="search.everywhere.popup/0.0.1920.1200@0.0.1920.1200" timestamp="1608625772108" />
   </component>
 </project>

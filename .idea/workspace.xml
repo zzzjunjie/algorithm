@@ -20,6 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6780e67c-fb66-4df3-87c1-f1dc321f758d" name="Default Changelist" comment="添加注释">
+      <change afterPath="$PROJECT_DIR$/src/utils/StringUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/树/从根到叶的二进制数之和.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/树/根据二叉树创建字符串.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/树/路径总和.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,6 +40,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Pull.Settings">
+    <option name="BRANCH" value="master" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -78,7 +85,7 @@
       <recent name="D:\codeFile\idea\algorithm\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.冒泡排序">
+  <component name="RunManager" selected="Application.StringUtils">
     <configuration name="冒泡排序" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="排序算法.冒泡排序" />
       <module name="algorithm" />
@@ -98,6 +105,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="位运算.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="utils.StringUtils" />
+      <module name="algorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -172,6 +192,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.StringUtils" />
         <item itemvalue="Application.冒泡排序" />
         <item itemvalue="Application.Demo01" />
       </list>
@@ -198,7 +219,9 @@
       <workItem from="1606492254589" duration="2505000" />
       <workItem from="1607244862199" duration="74000" />
       <workItem from="1608618750734" duration="1253000" />
-      <workItem from="1608638866561" duration="3654000" />
+      <workItem from="1608638866561" duration="6078000" />
+      <workItem from="1608875074187" duration="2904000" />
+      <workItem from="1609205214241" duration="1173000" />
     </task>
     <task id="LOCAL-00001" summary="初级算法提交">
       <created>1597670117882</created>
@@ -242,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608643379999</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="添加注释">
+      <created>1608687123185</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1608687123185</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,6 +300,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="添加注释" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2360" y="94" key="#Project_Structure" timestamp="1608687113376">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2360" y="94" key="#Project_Structure/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1608687113376" />
     <state x="2693" y="252" key="#com.intellij.ide.util.MemberChooser" timestamp="1608639367143">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -283,24 +317,28 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="558" y="87" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1606492334674" />
-    <state width="1238" height="201" key="GridCell.Tab.0.bottom" timestamp="1607244935542">
-      <screen x="0" y="23" width="1280" height="711" />
+    <state width="1493" height="270" key="GridCell.Tab.0.bottom" timestamp="1609062396566">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="270" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1609062396566" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606494297798" />
     <state width="1238" height="201" key="GridCell.Tab.0.bottom/0.23.1280.711@0.23.1280.711" timestamp="1607244935542" />
-    <state width="1238" height="201" key="GridCell.Tab.0.center" timestamp="1607244935541">
-      <screen x="0" y="23" width="1280" height="711" />
+    <state width="1493" height="270" key="GridCell.Tab.0.center" timestamp="1609062396566">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="270" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1609062396566" />
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606494297798" />
     <state width="1238" height="201" key="GridCell.Tab.0.center/0.23.1280.711@0.23.1280.711" timestamp="1607244935541" />
-    <state width="1238" height="201" key="GridCell.Tab.0.left" timestamp="1607244935540">
-      <screen x="0" y="23" width="1280" height="711" />
+    <state width="1493" height="270" key="GridCell.Tab.0.left" timestamp="1609062396566">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="270" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1609062396566" />
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606494297798" />
     <state width="1238" height="201" key="GridCell.Tab.0.left/0.23.1280.711@0.23.1280.711" timestamp="1607244935540" />
-    <state width="1238" height="201" key="GridCell.Tab.0.right" timestamp="1607244935542">
-      <screen x="0" y="23" width="1280" height="711" />
+    <state width="1493" height="270" key="GridCell.Tab.0.right" timestamp="1609062396566">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="270" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1609062396566" />
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606494297798" />
     <state width="1238" height="201" key="GridCell.Tab.0.right/0.23.1280.711@0.23.1280.711" timestamp="1607244935542" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1606493650506">
@@ -337,10 +375,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2536" y="240" key="run.anything.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1608639789091" />
-    <state x="2545" y="235" width="672" height="586" key="search.everywhere.popup" timestamp="1608639604789">
+    <state x="2545" y="235" width="672" height="586" key="search.everywhere.popup" timestamp="1608687971592">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2545" y="235" width="672" height="586" key="search.everywhere.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1608639604789" />
+    <state x="2545" y="235" width="672" height="586" key="search.everywhere.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1608687971592" />
     <state x="625" y="271" width="670" height="676" key="search.everywhere.popup/0.0.1920.1200@0.0.1920.1200" timestamp="1608625772108" />
   </component>
 </project>

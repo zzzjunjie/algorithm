@@ -25,8 +25,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6780e67c-fb66-4df3-87c1-f1dc321f758d" name="Default Changelist" comment="新增树的层次遍历">
-      <change afterPath="$PROJECT_DIR$/src/树/层次遍历_从下往上.java" afterDir="false" />
+    <list default="true" id="6780e67c-fb66-4df3-87c1-f1dc321f758d" name="Default Changelist" comment="新增树的层次遍历（从下往上）">
+      <change afterPath="$PROJECT_DIR$/src/树/翻转二叉树.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <list id="a5b859c5-4633-4f88-85a0-621f7edbc77c" name="Revert &quot;新增二叉树先序字符串训练（带括号）&quot;" comment="Revert &quot;新增二叉树先序字符串训练（带括号）&quot;&#10;&#10;This reverts commit 3496f2c2" />
     <option name="SHOW_DIALOG" value="false" />
@@ -225,7 +226,7 @@
       <workItem from="1608618750734" duration="1253000" />
       <workItem from="1608638866561" duration="6078000" />
       <workItem from="1608875074187" duration="2904000" />
-      <workItem from="1609205214241" duration="10506000" />
+      <workItem from="1609205214241" duration="12550000" />
     </task>
     <task id="LOCAL-00001" summary="初级算法提交">
       <created>1597670117882</created>
@@ -353,7 +354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609334300602</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="新增树的层次遍历（从下往上）">
+      <created>1609334684951</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1609334684951</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -401,7 +409,8 @@
     <MESSAGE value="修改深度计算的DFS算法" />
     <MESSAGE value="删除无用参数" />
     <MESSAGE value="新增树的层次遍历" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增树的层次遍历" />
+    <MESSAGE value="新增树的层次遍历（从下往上）" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增树的层次遍历（从下往上）" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2360" y="94" key="#Project_Structure" timestamp="1608687113376">

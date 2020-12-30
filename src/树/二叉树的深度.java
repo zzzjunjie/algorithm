@@ -40,14 +40,8 @@ public class 二叉树的深度 {
 
     // 解法2：使用DFS进行遍历
     int maxDep = 0;
-    public int maxDepth2(TreeNode root){
-        if (root==null){
-            return  maxDep;
-        }
-        maxDep++;
-        int leftDep = maxDepth2(root.left);
-        maxDep = 0;
-        int rightDep = maxDepth2(root.right);
-        return Math.max(leftDep,rightDep);
+    public int maxDepth2(TreeNode root) {
+        if(root == null) return 0;
+        return Math.max(maxDepth2(root.left), maxDepth2(root.right)) + 1;
     }
 }

@@ -25,9 +25,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6780e67c-fb66-4df3-87c1-f1dc321f758d" name="Default Changelist" comment="新增二叉树深度BFS解法">
+    <list default="true" id="6780e67c-fb66-4df3-87c1-f1dc321f758d" name="Default Changelist" comment="新增DFS遍历方式">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/树/二叉树的深度.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/树/二叉树的深度.java" afterDir="false" />
     </list>
     <list id="a5b859c5-4633-4f88-85a0-621f7edbc77c" name="Revert &quot;新增二叉树先序字符串训练（带括号）&quot;" comment="Revert &quot;新增二叉树先序字符串训练（带括号）&quot;&#10;&#10;This reverts commit 3496f2c2" />
     <option name="SHOW_DIALOG" value="false" />
@@ -226,7 +225,7 @@
       <workItem from="1608618750734" duration="1253000" />
       <workItem from="1608638866561" duration="6078000" />
       <workItem from="1608875074187" duration="2904000" />
-      <workItem from="1609205214241" duration="7373000" />
+      <workItem from="1609205214241" duration="8003000" />
     </task>
     <task id="LOCAL-00001" summary="初级算法提交">
       <created>1597670117882</created>
@@ -326,7 +325,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609293494728</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="新增DFS遍历方式">
+      <created>1609311716704</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1609311716705</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,7 +376,8 @@
     <MESSAGE value="新增合并二叉树" />
     <MESSAGE value="删除新增二叉树先序字符串训练（带括号）" />
     <MESSAGE value="新增二叉树深度BFS解法" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增二叉树深度BFS解法" />
+    <MESSAGE value="新增DFS遍历方式" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增DFS遍历方式" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2360" y="94" key="#Project_Structure" timestamp="1608687113376">

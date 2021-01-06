@@ -2,8 +2,6 @@ package 树;
 
 import 树.节点.TreeNode;
 
-import java.util.Timer;
-
 public class 二叉树的坡度 {
     int res = 0;
     public int findTilt(TreeNode root) {

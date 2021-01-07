@@ -3,55 +3,40 @@ package 树;
 import 树.节点.TreeNode;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
 
 public class 二叉搜索树中的众数 {
-    Map<Integer,Integer> map = new HashMap<>();
+    int preVal = 0, curTimes = 0, maxTimes = 0;
+    ArrayList<Integer> list = new ArrayList<Integer>();
     public int[] findMode(TreeNode root) {
-        if (root==null){
-            return null;
+        traversal(root);
+        //list转换为int[]
+        int size = list.size();
+        int[] ans = new int[size];
+        for(int i = 0; i < size; i++){
+            ans[i] = list.get(i);
         }
-        dfs(root);
-        int max = Integer.MIN_VALUE;
-        List<Integer> res = new ArrayList<>();
-        Iterator<Map.Entry<Integer, Integer>> iterator = map.entrySet().iterator();
-        while (iterator.hasNext()){
-            Map.Entry<Integer, Integer> next = iterator.next();
-            Integer key = next.getKey();
-            Integer value = next.getValue();
-            int temp = Math.max(max,value);
-             if (temp == max){
-                 res.add(key);
-             }
-             if (temp > max){
-                 max = temp;
-                 res = new ArrayList<>();
-                 res.add(key);
-             }
-        }
-        int[] r = new int[res.size()];
-        for (int i = 0; i < res.size(); i++) {
-            r[i] = res.get(i);
-        }
-        return r;
+        return ans;
     }
-
-    public void dfs(TreeNode root){
-        if (root==null){
-            return ;
+    //二叉搜索树中序遍历是递增顺序
+    public void traversal(TreeNode root){
+        if(root != null){
+            traversal(root.left);
+            //判断当前值与上一个值的关系, 更新 curTimes 和 preVal
+            if(preVal == root.val){
+                curTimes++;
+            }else{
+                preVal = root.val;
+                curTimes = 1;
+            }
+            //判断当前数量与最大数量的关系, 更新 list 和 maxTimes
+            if(curTimes == maxTimes){
+                list.add(root.val);
+            }else if(curTimes > maxTimes){
+                list.clear();
+                list.add(root.val);
+                maxTimes = curTimes;
+            }
+            traversal(root.right);
         }
-
-        if (!map.containsKey(root.val)) {
-          map.put(root.val,1);
-        }else{
-            Integer count = map.get(root.val);
-            count++;
-            map.put(root.val,count);
-        }
-        dfs(root.left);
-        dfs(root.right);
     }
 }

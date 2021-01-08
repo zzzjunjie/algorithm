@@ -8,9 +8,11 @@ import 树.节点.TreeNode;
  */
 public class 树的子结构 {
     public boolean isSubStructure(TreeNode A, TreeNode B) {
-        if (A==null){
+        // 其中一个为null直接返回false
+        if (A==null || B==null){
             return false;
         }
+        // 查看由A为根节点，是否和B相匹配
         return dfs(A,B) || isSubStructure(A.left,B) || isSubStructure(A.right,B);
     }
 
@@ -18,9 +20,9 @@ public class 树的子结构 {
         if (q==null){
             return true;
         }
-        if (p == null){
+        if (p == null || p.val!=q.val){
             return false;
         }
-        return p.val== q.val && dfs(p.left,q.left) && dfs(p.right,q.right);
+        return dfs(p.left,q.left) && dfs(p.right,q.right);
     }
 }

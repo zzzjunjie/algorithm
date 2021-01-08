@@ -3,6 +3,8 @@ package 树.普通;
 import 树.节点.TreeNode;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -64,7 +66,7 @@ class Pair {
         this.count = count;
     }
     */
-
+    /* 民间大神
     int cnt=0;
     List<Integer> dfs(TreeNode root, int distance, int level){
         if(root==null)return new ArrayList<>();
@@ -88,5 +90,31 @@ class Pair {
     public int countPairs(TreeNode root, int distance) {
         dfs(root,distance,0);
         return cnt;
+    }
+     */
+    int cnt = 0;
+    public int countPairs(TreeNode root, int distance) {
+        dfs(root,distance,0);
+        return cnt;
+    }
+
+    private List<Integer> dfs(TreeNode root, int distance, int level) {
+        if (root==null){
+            return new ArrayList<>();
+        }
+        if (root.left==null&&root.right==null){
+            return new ArrayList<>(Collections.singletonList(level));
+        }
+        List<Integer> left = dfs(root.left, distance, level + 1);
+        List<Integer> right = dfs(root.right, distance, level + 1);
+        for (Integer p : left) {
+            for (Integer q : right) {
+                if (p-level+q-level<=distance){
+                    cnt++;
+                }
+            }
+        }
+        left.addAll(right);
+        return left;
     }
 }

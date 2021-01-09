@@ -48,23 +48,27 @@ public class 具有所有最深节点的最小子树 {
 
     /** 大佬的解法 */
     public TreeNode subtreeWithAllDeepest(TreeNode root) {
-        if (root == null)
+        if (root == null){
             return null;
+        }
 
-        int ldep = maxDepth(root.left), rdep = maxDepth(root.right);
-        if (ldep == rdep)
+        int left = dfs(root.left);
+        int right = dfs(root.right);
+        if (left == right){
             return root;
-        else if (ldep > rdep)
+        }
+        if (left > right){
             return subtreeWithAllDeepest(root.left);
-        else
-            return subtreeWithAllDeepest(root.right);
+        }
+        return subtreeWithAllDeepest(root.right);
 
     }
 
-
-    int maxDepth(TreeNode root) {
-        if(root==null)
+    // 返回root的最大深度
+    int dfs(TreeNode root) {
+        if(root==null){
             return 0;
-        return Math.max(maxDepth(root.left), maxDepth(root.right))+1;
+        }
+        return Math.max(dfs(root.left), dfs(root.right))+1;
     }
 }

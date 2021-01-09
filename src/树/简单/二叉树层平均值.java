@@ -1,15 +1,11 @@
 package 树.简单;
 
-import sun.security.util.math.ImmutableIntegerModuloP;
 import 树.节点.TreeNode;
 
-import javax.activation.MailcapCommandMap;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
-import java.util.concurrent.LinkedBlockingDeque;
-import java.util.concurrent.RecursiveTask;
 
 public class 二叉树层平均值 {
     public List<Double> averageOfLevels(TreeNode root) {

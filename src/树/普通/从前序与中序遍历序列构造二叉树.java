@@ -4,7 +4,7 @@ import 树.节点.TreeNode;
 
 import java.util.HashMap;
 import java.util.Map;
-
+/*https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/submissions/*/
 public class 从前序与中序遍历序列构造二叉树 {
     public TreeNode buildTree(int[] preorder, int[] inorder) {
         if (preorder.length!=inorder.length){

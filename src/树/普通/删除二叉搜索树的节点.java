@@ -3,48 +3,31 @@ package 树.普通;
 import 树.节点.TreeNode;
 
 public class 删除二叉搜索树的节点 {
-    public TreeNode deleteNode(TreeNode root, int key) {
+    public TreeNode deleteNodeFromBST(TreeNode root, int key) {
         if (root == null) {
             return null;
         }
         if (key < root.val) {
-            // 待删除节点在左子树中
-            root.left = deleteNode(root.left, key);
+            root.left = deleteNodeFromBST(root.left, key);
             return root;
         } else if (key > root.val) {
-            // 待删除节点在右子树中
-            root.right = deleteNode(root.right, key);
+            root.right = deleteNodeFromBST(root.right, key);
             return root;
         } else {
-            // key == root.val，root 为待删除节点
-            if (root.left == null) {
-                // 返回右子树作为新的根
-                return root.right;
-            } else if (root.right == null) {
-                // 返回左子树作为新的根
+            TreeNode left = root.left;
+            TreeNode right = root.right;
+            /*如果 left 节点不为空，则找到 left 子树的最大值节点
+             * 使 right 子树作为该节点的右子树
+             * 如果 left 节点为空，则直接返回 right 节点即可*/
+            if (left != null) {
+                while (left.right != null) {
+                    left = left.right;
+                }
+                left.right = right;
                 return root.left;
             } else {
-                // 左右子树都存在，返回后继节点（右子树最左叶子）作为新的根
-                TreeNode successor = min(root.right);
-                successor.right = deleteMin(root.right);
-                successor.left = root.left;
-                return successor;
+                return right;
             }
         }
-    }
-
-    private TreeNode min(TreeNode node) {
-        if (node.left == null) {
-            return node;
-        }
-        return min(node.left);
-    }
-
-    private TreeNode deleteMin(TreeNode node) {
-        if (node.left == null) {
-            return node.right;
-        }
-        node.left = deleteMin(node.left);
-        return node;
     }
 }

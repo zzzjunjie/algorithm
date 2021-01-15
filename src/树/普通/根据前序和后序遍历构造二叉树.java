@@ -16,7 +16,7 @@ public class 根据前序和后序遍历构造二叉树 {
             index++;
         }
         root.left=helper(pre,post,prestart+1,prestart+1+index-poststart,poststart,index);
-        root.right=helper(pre,post,prestart+2+index-poststart,preend,index+1,preend-1);
+        root.right=helper(pre,post,prestart+2+index-poststart,preend,index+1,postend-1);
         return root;
 
     }

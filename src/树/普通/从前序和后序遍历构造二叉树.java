@@ -7,7 +7,7 @@ import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
 
-public class 根据前序和后序遍历构造二叉树 {
+public class 从前序和后序遍历构造二叉树 {
 //    public TreeNode constructFromPrePost(int[] pre, int[] post) {
 //        return helper(pre,post,0,pre.length-1,0,post.length-1);
 //    }

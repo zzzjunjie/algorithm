@@ -31,10 +31,10 @@ public class 从前序和后序遍历构造二叉树 {
         for (int i = 0; i < post.length; i++) {
             map.put(post[i],i);
         }
-        return helper(pre,0,pre.length-1,map,0,post.length-1);
+        return helper(pre,0,pre.length-1,0,post.length-1);
     }
 
-    private TreeNode helper(int[] pre, int preStart, int preEnd,Map<Integer,Integer> map,int postStart,int postEnd) {
+    private TreeNode helper(int[] pre, int preStart, int preEnd,int postStart,int postEnd) {
         if (preStart > preEnd){
             return null;
         }
@@ -46,9 +46,9 @@ public class 从前序和后序遍历构造二叉树 {
 
         Integer index = map.get(pre[preStart + 1]);
 
-        TreeNode left = helper(pre, preStart + 1, preStart + 1 + index - postStart, map, postStart, index);
+        TreeNode left = helper(pre, preStart + 1, preStart + 1 + index - postStart, postStart, index);
 
-        TreeNode right = helper(pre, preStart + 2 + index - postStart, preEnd, map, index+1, postEnd);
+        TreeNode right = helper(pre, preStart + 2 + index - postStart, preEnd, index+1, postEnd);
 
         node.left = left;
         node.right = right;

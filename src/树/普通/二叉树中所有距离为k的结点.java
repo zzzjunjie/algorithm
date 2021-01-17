@@ -4,57 +4,39 @@ import 树.节点.TreeNode;
 
 import java.util.*;
 
+/**
+ * https://leetcode-cn.com/problems/all-nodes-distance-k-in-binary-tree/
+ */
 public class 二叉树中所有距离为k的结点 {
-    Map<TreeNode, TreeNode> parent;
     public List<Integer> distanceK(TreeNode root, TreeNode target, int K) {
-        parent = new HashMap();
-        dfs(root, null);
-
-        Queue<TreeNode> queue = new LinkedList();
-        queue.add(null);
-        queue.add(target);
-
-        Set<TreeNode> seen = new HashSet();
-        seen.add(target);
-        seen.add(null);
-
-        int dist = 0;
-        while (!queue.isEmpty()) {
-            TreeNode node = queue.poll();
-            if (node == null) {
-                if (dist == K) {
-                    List<Integer> ans = new ArrayList();
-                    for (TreeNode n: queue)
-                        ans.add(n.val);
-                    return ans;
-                }
-                queue.offer(null);
-                dist++;
-            } else {
-                if (!seen.contains(node.left)) {
-                    seen.add(node.left);
-                    queue.offer(node.left);
-                }
-                if (!seen.contains(node.right)) {
-                    seen.add(node.right);
-                    queue.offer(node.right);
-                }
-                TreeNode par = parent.get(node);
-                if (!seen.contains(par)) {
-                    seen.add(par);
-                    queue.offer(par);
-                }
-            }
-        }
-
-        return new ArrayList<Integer>();
+        List<Integer> res = new ArrayList<>();
+        Map<TreeNode, TreeNode> familyMap = new HashMap<>();
+        //递归获取父子结点映射关系
+        map(root, familyMap);
+        boolean[] visited = new boolean[501];
+        //递归获取距离指定结点指定距离的所有结点值
+        search(target, K, res, visited, familyMap);
+        return res;
     }
 
-    public void dfs(TreeNode node, TreeNode par) {
-        if (node != null) {
-            parent.put(node, par);
-            dfs(node.left, node);
-            dfs(node.right, node);
+    private void map(TreeNode root, Map<TreeNode, TreeNode> familyMap) {
+        if(root == null) return ;
+        if(root.left != null) familyMap.put(root.left, root);
+        if(root.right != null) familyMap.put(root.right, root);
+        map(root.left, familyMap);
+        map(root.right, familyMap);
+    }
+
+    private void search(TreeNode target, int K, List<Integer> res, boolean[] visited, Map<TreeNode, TreeNode> familyMap) {
+        if(target == null || K < 0 || visited[target.val]) return;
+        if(K == 0 && !visited[target.val]) {
+            res.add(target.val);
+            visited[target.val] = true;
+            return;
         }
+        visited[target.val] = true;
+        search(target.left, K-1, res, visited, familyMap);
+        search(target.right, K-1, res, visited, familyMap);
+        search(familyMap.get(target), K-1, res, visited, familyMap);
     }
 }

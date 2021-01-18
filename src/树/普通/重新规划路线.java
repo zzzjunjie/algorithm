@@ -9,6 +9,16 @@ import java.util.Queue;
 /**
  * https://leetcode-cn.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/
  */
+
+/**
+ * 输入：n = 6, connections = [[0,1],[1,3],[2,3],[4,0],[4,5]]
+ * 输出：3
+ * 解释：更改以红色显示的路线的方向，使每个城市都可以到达城市 0
+ *
+ * 来源：力扣（LeetCode）
+ * 链接：https://leetcode-cn.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero
+ * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+ */
 public class 重新规划路线 {
     public int minReorder(int n, int[][] connections) {
         //BFS辅助队列

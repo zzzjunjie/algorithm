@@ -6,6 +6,9 @@ import java.util.LinkedList;
 import java.util.Map;
 import java.util.Queue;
 
+/**
+ * https://leetcode-cn.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/
+ */
 public class 重新规划路线 {
     public int minReorder(int n, int[][] connections) {
         Queue<Integer> vertex=new LinkedList<Integer>();//BFS辅助队列

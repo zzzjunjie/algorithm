@@ -17,9 +17,13 @@ public class 重新规划路线 {
         Map<Integer,HashSet<int[]>> graph=new HashMap<>();
         int ans=0;
         for(int[] e:connections) {
-            if(!graph.containsKey(e[0]))graph.put(e[0],new HashSet<int[]>());
+            if(!graph.containsKey(e[0])) {
+                graph.put(e[0],new HashSet<int[]>());
+            }
             graph.get(e[0]).add(e);
-            if(!graph.containsKey(e[1]))graph.put(e[1],new HashSet<int[]>());
+            if(!graph.containsKey(e[1])) {
+                graph.put(e[1],new HashSet<int[]>());
+            }
             graph.get(e[1]).add(e);
         }
         //从顶点0开始遍历该有向图
@@ -32,7 +36,9 @@ public class 重新规划路线 {
             //从graph中移除已经访问过的顶点
             graph.remove(ver);
             for(int[] e:hashtemp) {
-                if(e[0]!=ver&&graph.containsKey(e[0]))vertex.offer(e[0]);
+                if(e[0]!=ver&&graph.containsKey(e[0])) {
+                    vertex.offer(e[0]);
+                }
                 //e[1]!=ver,说明e[0]=ver,则该边是逆向边
                 if(e[1]!=ver&&graph.containsKey(e[1])) {
                     vertex.offer(e[1]);

@@ -25,4 +25,8 @@ public class 二叉树寻路 {
         return integers;
     }
 
+    public static void main(String[] args) {
+        int a = (int) (Math.log(7) / Math.log(2));
+        System.out.println(a);
+    }
 }

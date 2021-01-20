@@ -8,16 +8,15 @@ public class 删除给定值的叶子节点 {
             return root;
         }
 
-        TreeNode left = removeLeafNodes(root.left,target);
+        root.left = removeLeafNodes(root.left,target);
 
-        TreeNode right = removeLeafNodes(root.right,target);
+        root.right = removeLeafNodes(root.right,target);
 
-        if (left==null && right == null && target==root.val){
+        if (root.left==null && root.right == null && target==root.val){
             return null;
         }
 
-        root.left = left;
-        root.right = right;
+
         return root;
     }
 }

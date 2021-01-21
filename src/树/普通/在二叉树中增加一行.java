@@ -3,6 +3,7 @@ package 树.普通;
 import 树.节点.TreeNode;
 
 public class 在二叉树中增加一行 {
+    /**
     public TreeNode addOneRow(TreeNode root, int v, int d) {
         if (d == 0 || d == 1) {
             TreeNode t = new TreeNode(v);
@@ -16,6 +17,7 @@ public class 在二叉树中增加一行 {
         }
         return root;
     }
+     */
     /**
     public TreeNode addOneRow(TreeNode t, int v, int d) {
         if (d == 1) {

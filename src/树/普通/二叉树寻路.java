@@ -7,8 +7,8 @@ import java.util.List;
 public class 二叉树寻路 {
     public List<Integer> pathInZigZagTree(int label) {
         List<Integer> list = new ArrayList<>();
-        int h = (int) Math.log(label-2)+1;
-//        int h = (int)(Math.log(label)/Math.log(2))+1;
+//        int h = (int) Math.log(label-2)+1;
+        int h = (int)(Math.log(label)/Math.log(2))+1;
         while(label>1 && h>0){
             list.add(label);
             label =(int)(Math.pow(2,h)-1-label+Math.pow(2,h-1))/2;

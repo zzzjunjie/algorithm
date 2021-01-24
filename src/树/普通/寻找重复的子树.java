@@ -6,6 +6,6 @@ import java.util.List;
 
 public class 寻找重复的子树 {
     public List<TreeNode> findDuplicateSubtrees(TreeNode root) {
-
+    return null;
     }
 }

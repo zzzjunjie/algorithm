@@ -3,14 +3,15 @@ package 查找算法.KMP;
 public class KMP {
 
     public static void main(String[] args) {
-        final String haystack = "BBC ABCDAB ABCDABCDABDE";
-        final String needle = "ABCDABD";
+        final String haystack = "ABCDEFGH";
+        final String needle = "EFG";
         KMPmatcher(haystack, needle);
     }
 
     public static void KMPmatcher(final String haystack, final String needle) {
         final int m = haystack.length();
         final int n = needle.length();
+        // 先将查找的表生成
         final int[] pi = computePrefixFunction(needle);
         int q = 0;
         for (int i = 0; i < m; i++) {

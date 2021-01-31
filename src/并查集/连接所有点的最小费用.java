@@ -6,7 +6,8 @@ public class 连接所有点的最小费用 {
     public static void main(String[] args) {
         连接所有点的最小费用 func = new 连接所有点的最小费用();
         int[][] param = {{0,0},{2,2},{3,10},{5,2},{7,0}};
-        System.out.println(func.minCostConnectPoints(param));
+        int res = func.minCostConnectPoints(param);
+        System.out.println(res);
     }
     public int minCostConnectPoints(int[][] points) {
         int n = points.length;

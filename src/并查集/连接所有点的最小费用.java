@@ -3,6 +3,11 @@ package 并查集;
 import java.util.*;
 
 public class 连接所有点的最小费用 {
+    public static void main(String[] args) {
+        连接所有点的最小费用 func = new 连接所有点的最小费用();
+        int[][] param = {{0,0},{2,2},{3,10},{5,2},{7,0}};
+        System.out.println(func.minCostConnectPoints(param));
+    }
     public int minCostConnectPoints(int[][] points) {
         int n = points.length;
         DisjointSetUnion dsu = new DisjointSetUnion(n);

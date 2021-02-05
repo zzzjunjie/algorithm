@@ -9,8 +9,8 @@ import java.util.Arrays;
 public class 快速排序 {
   public static void main(String[] args) {
     int[] a = {1,10,8,9,2,6,4};
-//    a = QuickSort(a,0,a.length-1);
-    quickSort(a,0,a.length-1);
+    a = QuickSort(a,0,a.length-1);
+//    quickSort(a,0,a.length-1);
     System.out.println(Arrays.toString(a));
   }
 
@@ -53,12 +53,13 @@ public class 快速排序 {
     int pivot = (int) (start + Math.random() * (end - start + 1));
     int smallIndex = start - 1;
     swap(array, pivot, end);
-    for (int i = start; i <= end; i++)
+    for (int i = start; i <= end; i++){
       if (array[i] <= array[end]) {
         smallIndex++;
         if (i > smallIndex)
           swap(array, i, smallIndex);
       }
+    }
     return smallIndex;
   }
   /**

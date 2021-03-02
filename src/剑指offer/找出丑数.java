@@ -1,38 +1,41 @@
 package 剑指offer;
 
 public class 找出丑数 {
-//    // 判断一个数是不是丑数
-//    public static boolean isUglyNumber(int n){
-//        while (n % 2 ==0){
-//             n = n /2;
-//        }
-//        while ( n % 3 == 0){
-//             n = n / 3;
-//        }
-//        while (n % 5 == 0){
-//            n = n / 5;
-//        }
-//        return n==1;
-//    }
-//
-//
-//    public static int nthUglyNumber(int n){
-//        int count = 0;
-//        int num = 1;
-//        while (true){
-//            if (isUglyNumber(num)){
-//                count ++;
-//            }
-//            if (count == n){
-//                return num;
-//            }
-//            num ++;
-//        }
-//    }
+    // 判断一个数是不是丑数
+    /*
+    public static boolean isUglyNumber(int n){
+        if(n<0){
+            return false;
+        }
+        while (n % 2 ==0){
+             n = n >> 1;
+        }
+        while ( n % 3 == 0){
+             n = n / 3;
+        }
+        while (n % 5 == 0){
+            n = n / 5;
+        }
+        return n==1;
+    }
+
+    public static int nthUglyNumber(int n){
+        int count = 0;
+        int num = 1;
+        while (true){
+            if (isUglyNumber(num)){
+                count ++;
+            }
+            if (count == n){
+                return num;
+            }
+            num ++;
+        }
+    }
+    */
 //    public static void main(String[] args) {
 //        System.out.println(nthUglyNumber(10));
 //    }
-
 
 
     public int nthUglyNumber(int n) {

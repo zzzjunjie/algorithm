@@ -6,6 +6,7 @@ import java.util.Arrays;
  * @author zhou
  * @date 2020/7/14 23:18
  */
+// 已学会
 public class 冒泡排序 {
   public static void main(String[] args) {
     int[] a = {10,5,2,8,6,1};

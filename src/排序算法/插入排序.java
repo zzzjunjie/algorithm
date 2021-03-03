@@ -6,6 +6,7 @@ import java.util.Arrays;
  * @author zhou
  * @date 2020/7/14 23:22
  */
+// 已解决
 public class 插入排序 {
   public static void main(String[] args) {
     int[] a = {1,10,8,9,2,6,4};
@@ -15,13 +16,13 @@ public class 插入排序 {
 
   //插入排序
   public static void insertSort(int[] list){
-    for(int i=1;i<list.length;i++){
-      int j=0;
-      int temp = list[i];
-      for (j=i-1;j>=0&&list[j]>temp;j--){
-          list[j+1]=list[j];
+    for (int i = 1; i < list.length; i++) {
+      int tmp = list[i];
+      int j;
+      for ( j = i-1; j>=0&&list[j]>tmp ; j--) {
+        list[j+1] = list[j];
       }
-      list[j+1]=temp;
+      list[j+1] = tmp;
     }
   }
 

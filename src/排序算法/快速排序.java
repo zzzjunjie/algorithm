@@ -6,6 +6,7 @@ import java.util.Arrays;
  * @author zhou
  * @date 2020/7/14 23:21
  */
+// 已学会
 public class 快速排序 {
   public static void main(String[] args) {
     int[] a = {1,10,8,9,2,6,4};

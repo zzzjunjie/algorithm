@@ -5,11 +5,14 @@ import java.util.Scanner;
 public class Prim {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int Inf = 99;
-        int n, m, count, min, minIndex;
+        // 最大的权值
+        int Inf = Integer.MAX_VALUE;
+        // n行m列
+        int n, m;
+        int count, min, minIndex;
         int[][] vertexes;
         boolean[] isConnected;//如果某顶点作为末端顶点被连接，应该为true
-        int[] dis;//存储已连接顶点都未连接顶点的最短距离
+        int[] dis;//存储已连接顶点到未连接顶点的最短距离
         int sum = 0;//存储路径长度
         n = in.nextInt();
         m = in.nextInt();

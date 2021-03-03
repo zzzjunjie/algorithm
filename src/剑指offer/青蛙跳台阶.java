@@ -14,6 +14,6 @@ public class 青蛙跳台阶 {
         return ret;
     }
     public static void main(String[] args) {
-        System.out.println(func(10));
+        System.out.println(func(7));
     }
 }

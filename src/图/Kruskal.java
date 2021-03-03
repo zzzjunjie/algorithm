@@ -1,16 +1,14 @@
 package 图;
 
-import javax.crypto.interfaces.PBEKey;
-import javax.sound.midi.Soundbank;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
 public class Kruskal {
     public static void main(String[] args) {
-        int[][] graph = {{0,2,3,5},{2,0,6,4},{3,6,0,1},{5,4,1,0}};
+        int[][] graph = {{0,16,7,5,6},{16,0,6,9,8},{7,6,0,13,11},{5,9,13,0,4},{6,8,11,4,0}};
         Kruskal kruskal = new Kruskal();
-        kruskal.Kruskal(4,graph);
+        kruskal.Kruskal(5,graph);
     }
 
     public void Kruskal(int n,int[][] graph){
@@ -58,7 +56,7 @@ public class Kruskal {
             if (parent[x]!=x){
                 parent[x] = find(parent[x]);
             }
-            return x;
+            return parent[x];
         }
 
         public boolean union(int x,int y){

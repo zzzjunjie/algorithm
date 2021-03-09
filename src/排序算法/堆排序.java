@@ -5,6 +5,13 @@ package 排序算法;
  * @date 2020/7/14 23:28
  */
 public class 堆排序 {
+
+    public static void main(String[] args) {
+        int[] arr = {1,2,3,4,5,6,7,8,9,10,11,12};
+        int[] arrTemp = HeapSort(arr);
+        System.out.println(arrTemp);
+    }
+
     //声明全局变量，用于记录数组array的长度；
     static int len;
 

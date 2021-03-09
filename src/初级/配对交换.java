@@ -7,11 +7,12 @@ package 初级;
  * 尽量使用较少的指令（也就是说，位0与位1交换，位2与位3交换，以此类推）。
  */
 public class 配对交换 {
-  public static void main(String[] args) {
+    public static void main(String[] args) {
 
-  }
-  public int exchangeBits(int num) {
-    return 0;
+    }
 
-  }
+    public int exchangeBits(int num) {
+        return 0;
+
+    }
 }

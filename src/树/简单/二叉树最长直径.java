@@ -3,50 +3,23 @@ package 树.简单;
 import 树.节点.TreeNode;
 
 public class 二叉树最长直径 {
-    int max ;
+    int max;
+
     public int diameterOfBinaryTree(TreeNode root) {
         max = 1;
         dep(root);
         return max;
     }
 
-    public int dep (TreeNode root){
-        if (root==null){
+    public int dep(TreeNode root) {
+        if (root == null) {
             return 0;
         }
-        int left = dep(root.left)+1;
-        int right = dep(root.right)+1;
-        max = Math.max(max,left+right+1);
-        return Math.max(left,right)+1;
+        int left = dep(root.left) + 1;
+        int right = dep(root.right) + 1;
+        max = Math.max(max, left + right + 1);
+        return Math.max(left, right) + 1;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //    int ans;

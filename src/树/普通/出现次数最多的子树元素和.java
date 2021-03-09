@@ -5,10 +5,11 @@ import 树.节点.TreeNode;
 import java.util.*;
 
 public class 出现次数最多的子树元素和 {
-    static Map<TreeNode,Integer> map = new HashMap<>();
-    static  Map<Integer,Integer> res = new HashMap<>();
+    static Map<TreeNode, Integer> map = new HashMap<>();
+    static Map<Integer, Integer> res = new HashMap<>();
+
     public static int[] findFrequentTreeSum(TreeNode root) {
-        if (root== null){
+        if (root == null) {
             return new int[0];
         }
         help(root);
@@ -17,13 +18,13 @@ public class 出现次数最多的子树元素和 {
         for (Map.Entry<Integer, Integer> entry : res.entrySet()) {
             Integer key = entry.getKey();
             Integer value = entry.getValue();
-            if (value>max){
+            if (value > max) {
                 list = new ArrayList<>();
                 list.add(key);
                 max = value;
                 continue;
             }
-            if (value == max){
+            if (value == max) {
                 list.add(key);
             }
         }
@@ -34,52 +35,52 @@ public class 出现次数最多的子树元素和 {
         return intRes;
     }
 
-    public static void help(TreeNode root){
-        if (root == null){
-            return ;
+    public static void help(TreeNode root) {
+        if (root == null) {
+            return;
         }
         int dfs = dfs(root);
         if (res.containsKey(dfs)) {
-            int i = res.get(dfs)+ 1;
-            res.put(dfs,i);
-        }else{
-            res.put(dfs,1);
+            int i = res.get(dfs) + 1;
+            res.put(dfs, i);
+        } else {
+            res.put(dfs, 1);
         }
         help(root.left);
         help(root.right);
     }
 
-    public static int dfs(TreeNode root){
-        if (root==null){
+    public static int dfs(TreeNode root) {
+        if (root == null) {
             return 0;
         }
-        if (map.containsKey(root)){
+        if (map.containsKey(root)) {
             return map.get(root);
         }
         int left = dfs(root.left);
         int right = dfs(root.right);
-        int res = left+right+root.val;
-        map.put(root,res);
+        int res = left + right + root.val;
+        map.put(root, res);
         return res;
     }
 
     public static void main(String[] args) {
-        List<Integer> tmp = Arrays.asList(5,2,-3);
+        List<Integer> tmp = Arrays.asList(5, 2, -3);
         Queue<Integer> list = new LinkedList<>(tmp);
         TreeNode root = new TreeNode(list.poll());
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
-        while (!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             TreeNode poll = queue.poll();
-            if (poll == null){
+            if (poll == null) {
                 continue;
             }
             Integer left = list.poll();
             Integer right = list.poll();
-            if (left!=null){
+            if (left != null) {
                 poll.left = new TreeNode(left);
             }
-            if (right!=null){
+            if (right != null) {
                 poll.right = new TreeNode(right);
             }
 

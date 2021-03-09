@@ -14,21 +14,21 @@ public class 二叉树层平均值 {
 
         queue.offer(root);
 
-        while (!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             int size = queue.size();
-            double sum = 0 ;
+            double sum = 0;
             for (int i = 0; i < size; i++) {
                 TreeNode poll = queue.poll();
-                if (poll.left!=null){
+                if (poll.left != null) {
                     queue.offer(poll.left);
                 }
-                if (poll.right!=null) {
+                if (poll.right != null) {
                     queue.offer(poll.right);
                 }
                 sum = sum + poll.val;
                 System.out.println(sum);
             }
-            res.add(sum/size);
+            res.add(sum / size);
         }
         return res;
     }

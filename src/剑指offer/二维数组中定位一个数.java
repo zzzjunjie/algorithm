@@ -12,15 +12,15 @@ public class 二维数组中定位一个数 {
 
         int row = 0;
         int col = cols - 1;
-        while (row < rows && col >=0){
+        while (row < rows && col >= 0) {
             int tmp = matrix[row][col];
-            if (tmp == target){
+            if (tmp == target) {
                 return true;
             }
-            if (tmp > target){
-                col --;
-            }else{
-                row ++;
+            if (tmp > target) {
+                col--;
+            } else {
+                row++;
             }
         }
         return false;

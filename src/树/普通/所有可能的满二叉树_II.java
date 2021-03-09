@@ -8,19 +8,20 @@ import java.util.List;
 import java.util.Map;
 
 public class 所有可能的满二叉树_II {
-    Map<Integer,List<TreeNode>> map = new HashMap<>();
+    Map<Integer, List<TreeNode>> map = new HashMap<>();
+
     public List<TreeNode> allPossibleFBT(int N) {
         List<TreeNode> res = new ArrayList<>();
 
-        if (N==1) {
+        if (N == 1) {
             res.add(new TreeNode(0));
             return res;
         }
-        if (map.containsKey(N)){
+        if (map.containsKey(N)) {
             return map.get(N);
         }
         // 只有单数才可能会构建成满二叉树
-        if (N % 2 == 1){
+        if (N % 2 == 1) {
             // i代表左边有多少个数去组成一棵树
             for (int i = 0; i < N; i++) {
                 // Y代表右边有多少个数去组成一棵树
@@ -40,7 +41,7 @@ public class 所有可能的满二叉树_II {
                 }
             }
         }
-        map.put(N,res);
+        map.put(N, res);
         return res;
     }
 }

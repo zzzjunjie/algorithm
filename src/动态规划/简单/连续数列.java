@@ -6,8 +6,8 @@ public class 连续数列 {
         int pre = 0;
         int res = nums[0];
         for (int i = 0; i < nums.length; i++) {
-            pre = Math.max(pre + nums[i],nums[i]);
-            res = Math.max(pre,res);
+            pre = Math.max(pre + nums[i], nums[i]);
+            res = Math.max(pre, res);
         }
         return res;
     }

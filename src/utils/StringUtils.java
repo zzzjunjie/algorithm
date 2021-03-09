@@ -4,35 +4,28 @@ public class StringUtils {
     /**
      * 移除多余空行和空格
      */
-    public static String dealRedundantSpaceAndBlankLine(String content)
-    {
-        if (content == null || content.length() == 0)
-        {
+    public static String dealRedundantSpaceAndBlankLine(String content) {
+        if (content == null || content.length() == 0) {
             return "";
         }
         StringBuilder strAfterRemoveCRSB = new StringBuilder();
-        for (int i = 0; i < content.length(); i++)
-        {
+        for (int i = 0; i < content.length(); i++) {
             if (content.charAt(i) != '\r')
                 strAfterRemoveCRSB.append(content.charAt(i));
         }
         String strAfterRemoveCR = strAfterRemoveCRSB.toString();
-        if (strAfterRemoveCR.length() == 0)
-        {
+        if (strAfterRemoveCR.length() == 0) {
             return "";
         }
         StringBuilder resultSB = new StringBuilder();
         String[] lines = strAfterRemoveCR.split("\n");
         int blankCount = 0;
-        for (String line : lines)
-        {
-            if (line == null)
-            {
+        for (String line : lines) {
+            if (line == null) {
                 continue;
             }
             String lineTrim = line.trim();
-            if ("".equals(lineTrim))
-            {
+            if ("".equals(lineTrim)) {
                 blankCount++;
                 if (blankCount <= 2) {
                     resultSB.append("\n");
@@ -49,8 +42,7 @@ public class StringUtils {
     /**
      * 移除1行中的多余空格
      */
-    public static String dealSpace4OneLine(String line)
-    {
+    public static String dealSpace4OneLine(String line) {
         if (line == null || "".equals(line)) {
             return "";
         }
@@ -58,8 +50,7 @@ public class StringUtils {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < line.length(); i++) {
             char curChar = line.charAt(i);
-            if (curChar == ' ')
-            {
+            if (curChar == ' ') {
                 spaceCount++;
                 if (spaceCount <= 5) {
                     sb.append(' ');

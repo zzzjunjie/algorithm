@@ -17,9 +17,9 @@ public class MatrixUDG {
         int vlen = readInt();
         System.out.printf("input edge number: ");
         int elen = readInt();
-        if ( vlen < 1 || elen < 1 || (elen > (vlen*(vlen - 1)))) {
+        if (vlen < 1 || elen < 1 || (elen > (vlen * (vlen - 1)))) {
             System.out.printf("input error: invalid parameters!\n");
-            return ;
+            return;
         }
 
         // 初始化"顶点"
@@ -39,9 +39,9 @@ public class MatrixUDG {
             int p1 = getPosition(c1);
             int p2 = getPosition(c2);
 
-            if (p1==-1 || p2==-1) {
+            if (p1 == -1 || p2 == -1) {
                 System.out.printf("input error: invalid edge!\n");
-                return ;
+                return;
             }
 
             mMatrix[p1][p2] = 1;
@@ -83,8 +83,8 @@ public class MatrixUDG {
      * 返回ch位置
      */
     private int getPosition(char ch) {
-        for(int i=0; i<mVexs.length; i++)
-            if(mVexs[i]==ch)
+        for (int i = 0; i < mVexs.length; i++)
+            if (mVexs[i] == ch)
                 return i;
         return -1;
     }
@@ -93,15 +93,15 @@ public class MatrixUDG {
      * 读取一个输入字符
      */
     private char readChar() {
-        char ch='0';
+        char ch = '0';
 
         do {
             try {
-                ch = (char)System.in.read();
+                ch = (char) System.in.read();
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        } while(!((ch>='a'&&ch<='z') || (ch>='A'&&ch<='Z')));
+        } while (!((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')));
 
         return ch;
     }
@@ -119,7 +119,7 @@ public class MatrixUDG {
      */
     private int firstVertex(int v) {
 
-        if (v<0 || v>(mVexs.length-1))
+        if (v < 0 || v > (mVexs.length - 1))
             return -1;
 
         for (int i = 0; i < mVexs.length; i++)
@@ -134,7 +134,7 @@ public class MatrixUDG {
      */
     private int nextVertex(int v, int w) {
 
-        if (v<0 || v>(mVexs.length-1) || w<0 || w>(mVexs.length-1))
+        if (v < 0 || v > (mVexs.length - 1) || w < 0 || w > (mVexs.length - 1))
             return -1;
 
         for (int i = w + 1; i < mVexs.length; i++)

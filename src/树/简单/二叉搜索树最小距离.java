@@ -27,18 +27,19 @@ public class 二叉搜索树最小距离 {
 
     TreeNode node = null;
     int min = Integer.MAX_VALUE;
+
     public int minDiffInBST(TreeNode root) {
         dfs(root);
         return min;
     }
 
-    public void dfs(TreeNode root){
-        if (root==null) {
+    public void dfs(TreeNode root) {
+        if (root == null) {
             return;
         }
         dfs(root.left);
-        if (node!=null){
-            min = Math.min(Math.abs(node.val-root.val),min);
+        if (node != null) {
+            min = Math.min(Math.abs(node.val - root.val), min);
         }
         node = root;
         dfs(root.right);

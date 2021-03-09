@@ -7,7 +7,7 @@ public class 比特位计数 {
         // [0, b) is calculated
         while (b <= num) {
             // generate [b, 2b) or [b, num) from [0, b)
-            while(i < b && i + b <= num){
+            while (i < b && i + b <= num) {
                 ans[i + b] = ans[i] + 1;
                 ++i;
             }

@@ -12,15 +12,16 @@ import java.util.Queue;
  * 二叉搜索树迭代器
  */
 public class BSTIterator {
-    private TreeNode root ;
+    private TreeNode root;
     Queue<TreeNode> queue = new LinkedList<>();
+
     public BSTIterator(TreeNode root) {
         this.root = root;
         dfs(root);
     }
 
     private void dfs(TreeNode root) {
-        if (root==null){
+        if (root == null) {
             return;
         }
         dfs(root.left);
@@ -30,7 +31,7 @@ public class BSTIterator {
 
     public int next() {
         TreeNode poll = queue.poll();
-        if (poll!=null){
+        if (poll != null) {
             return poll.val;
         }
         return -1;

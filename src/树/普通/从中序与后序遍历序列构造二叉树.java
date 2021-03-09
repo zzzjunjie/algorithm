@@ -21,7 +21,7 @@ public class 从中序与后序遍历序列构造二叉树 {
                 inIndex = i;
             }
         }
-        TreeNode left = helper(inorder, postorder, postEnd - (inEnd- inIndex) - 1, inStart, inIndex - 1);
+        TreeNode left = helper(inorder, postorder, postEnd - (inEnd - inIndex) - 1, inStart, inIndex - 1);
         TreeNode right = helper(inorder, postorder, postEnd - 1, inIndex + 1, inEnd);
         current.left = left;
         current.right = right;

@@ -10,6 +10,7 @@ public class 二叉树的最近公共祖先 {
      * 1、p q 一个在左子树 一个在右子树 那么当前节点即是最近公共祖先
      * 2、p q 都在左子树
      * 3、p q 都在右子树
+     *
      * @param root
      * @param p
      * @param q

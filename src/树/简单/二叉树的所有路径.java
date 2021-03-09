@@ -10,25 +10,25 @@ import java.util.Queue;
 public class 二叉树的所有路径 {
     public List<String> binaryTreePaths(TreeNode root) {
         List<String> res = new ArrayList<>();
-        if (root==null)return res;
-        dfs(root,"",res);
+        if (root == null) return res;
+        dfs(root, "", res);
         return res;
     }
 
-    public void dfs(TreeNode node,String cur,List<String> res){
-        if (node==null){
-            return ;
+    public void dfs(TreeNode node, String cur, List<String> res) {
+        if (node == null) {
+            return;
         }
-        if (cur.equals("")){
+        if (cur.equals("")) {
             cur = cur + node.val;
-        }else{
-            cur = cur +"->"+ node.val;
+        } else {
+            cur = cur + "->" + node.val;
         }
-        if (node.left==null && node.right==null) {
+        if (node.left == null && node.right == null) {
             res.add(cur);
-        }else{
-            dfs(node.left,cur,res);
-            dfs(node.right,cur,res);
+        } else {
+            dfs(node.left, cur, res);
+            dfs(node.right, cur, res);
         }
     }
 

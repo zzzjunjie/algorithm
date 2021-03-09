@@ -4,16 +4,17 @@ import 树.节点.TreeNode;
 
 public class 二叉搜索树中的搜索 {
     TreeNode node = null;
+
     public TreeNode searchBST(TreeNode root, int val) {
-        dfs(root,val);
+        dfs(root, val);
         return node;
     }
 
-    public void dfs(TreeNode root,int val){
-        if (root==null || node!=null){
+    public void dfs(TreeNode root, int val) {
+        if (root == null || node != null) {
             return;
         }
-        if (root.val == val){
+        if (root.val == val) {
             node = root;
         }
         dfs(root.left, val);

@@ -35,7 +35,7 @@ public class 冗余连接 {
     }
 
     public static void main(String[] args) {
-        int[][] arr = {{1,2},{1,3},{2,3}};
+        int[][] arr = {{1, 2}, {1, 3}, {2, 3}};
         int[] redundantConnection = findRedundantConnection(arr);
         System.out.println(Arrays.toString(redundantConnection));
     }

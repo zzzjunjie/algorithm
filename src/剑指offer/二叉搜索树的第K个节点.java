@@ -28,21 +28,21 @@ public class 二叉搜索树的第K个节点 {
     public int kthSmallest(TreeNode root, int k) {
         // 查找左子树节点总和
         int leftCount = find(root.left);
-        if (leftCount == k -1){
+        if (leftCount == k - 1) {
             return root.val;
         }
-        if (leftCount >= k){
-            return kthSmallest(root.left,k);
-        }else{
-            return kthSmallest(root.right,k - leftCount - 1);
+        if (leftCount >= k) {
+            return kthSmallest(root.left, k);
+        } else {
+            return kthSmallest(root.right, k - leftCount - 1);
         }
     }
 
-    public int find(TreeNode root){
-        if (root == null){
+    public int find(TreeNode root) {
+        if (root == null) {
             return 0;
         }
         // 返回左右两边节点个数总和
-        return find(root.left) + find(root.right) +1;
+        return find(root.left) + find(root.right) + 1;
     }
 }

@@ -16,7 +16,7 @@ public class Random {
 
     public static String random() {
         List<String> list = new ArrayList<>(ServiceMap.IP_ADDRESS_MAP.keySet());
-        int index = (int) (Math.random()*list.size());
+        int index = (int) (Math.random() * list.size());
         return list.get(index);
 
     }

@@ -21,14 +21,14 @@ public class 叶子相似的书 {
 //            dfs(node.left, leafValues);
 //            dfs(node.right, leafValues);
 //        }
-        if (node==null) {
+        if (node == null) {
             return;
         }
 
-        if (node.left==null && node.right==null) {
+        if (node.left == null && node.right == null) {
             leafValues.add(node.val);
         }
-        dfs(node.left,leafValues);
-        dfs(node.right,leafValues);
+        dfs(node.left, leafValues);
+        dfs(node.right, leafValues);
     }
 }

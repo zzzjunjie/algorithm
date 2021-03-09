@@ -8,14 +8,15 @@ import java.util.Queue;
 public class BiNode {
     //--------------------------------------------年轻写的- -垃圾代码效率贼低-------------------------------------------------------
     Queue<Integer> queue = new LinkedList<>();
+
     public TreeNode convertBiNode(TreeNode root) {
-        if (root==null){
+        if (root == null) {
             return root;
         }
         dfs(root);
-        TreeNode node  = new TreeNode(queue.poll());
+        TreeNode node = new TreeNode(queue.poll());
         TreeNode r = node;
-        while (!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             r.right = new TreeNode(queue.poll());
             r = r.right;
         }
@@ -23,9 +24,9 @@ public class BiNode {
         return root;
     }
 
-    public void dfs(TreeNode root){
-        if (root==null){
-            return ;
+    public void dfs(TreeNode root) {
+        if (root == null) {
+            return;
         }
         dfs(root.left);
         queue.offer(root.val);
@@ -42,6 +43,7 @@ public class BiNode {
         dfs2(root);
         return pre.right;
     }
+
     public void dfs2(TreeNode root) {
         if (root == null) return;
         dfs2(root.left);

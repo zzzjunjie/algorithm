@@ -10,29 +10,29 @@ import java.util.Queue;
 
 public class 特定深度节点链表 {
     public ListNode[] listOfDepth(TreeNode tree) {
-        if (tree==null) {
+        if (tree == null) {
             return new ListNode[0];
         }
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(tree);
         List<ListNode> res = new ArrayList<>();
-        while (!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             int size = queue.size();
             ListNode item = null;
             ListNode cur = null;
             for (int i = 0; i < size; i++) {
                 TreeNode poll = queue.poll();
-                if (item==null) {
+                if (item == null) {
                     item = new ListNode(poll.val);
                     cur = item;
-                }else{
+                } else {
                     cur.next = new ListNode(poll.val);
-                    cur  = cur.next;
+                    cur = cur.next;
                 }
-                if (poll.left!=null){
+                if (poll.left != null) {
                     queue.offer(poll.left);
                 }
-                if (poll.right!=null){
+                if (poll.right != null) {
                     queue.offer(poll.right);
                 }
             }

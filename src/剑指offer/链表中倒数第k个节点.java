@@ -4,7 +4,10 @@ public class 链表中倒数第k个节点 {
     class ListNode {
         int val;
         ListNode next;
-        ListNode(int x) { val = x; }
+
+        ListNode(int x) {
+            val = x;
+        }
     }
 
     public ListNode getKthFromEnd(ListNode head, int k) {
@@ -13,8 +16,8 @@ public class 链表中倒数第k个节点 {
         for (int i = 0; i < k; i++) {
             hight = hight.next;
         }
-        while (hight!=null){
-            hight= head.next;
+        while (hight != null) {
+            hight = head.next;
             low = low.next;
         }
         return low;

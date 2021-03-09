@@ -18,6 +18,7 @@ public class 二叉树最大宽度 {
      * 右子树的编号=父节点*2+1
      */
     private int maxW = 1;
+
     public int widthOfBinaryTree(TreeNode root) {
         if (root == null)
             return 0;

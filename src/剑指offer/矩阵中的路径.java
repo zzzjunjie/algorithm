@@ -5,7 +5,7 @@ public class 矩阵中的路径 {
         char[] words = word.toCharArray();
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[0].length; j++) {
-                if (dfs(board,words,i,j,0)){
+                if (dfs(board, words, i, j, 0)) {
                     return true;
                 }
             }
@@ -17,11 +17,11 @@ public class 矩阵中的路径 {
         if (i >= board.length || i < 0 || j < 0 || j >= board[0].length || work[k] != board[i][j]) {
             return false;
         }
-        if (k == work.length - 1){
+        if (k == work.length - 1) {
             return true;
         }
         board[i][j] = '\0';
-        boolean res = dfs(board,work,i+1,j,k+1) || dfs(board,work,i-1,j,k+1) || dfs(board,work,i,j+1,k+1) || dfs(board,work,i,j-1,k+1);
+        boolean res = dfs(board, work, i + 1, j, k + 1) || dfs(board, work, i - 1, j, k + 1) || dfs(board, work, i, j + 1, k + 1) || dfs(board, work, i, j - 1, k + 1);
         board[i][j] = work[k];
         return res;
     }

@@ -5,6 +5,7 @@ import 树.节点.TreeNode;
 
 public class 从叶结点开始的最小字符串 {
     StringBuilder res = new StringBuilder();
+
     public String smallestFromLeaf(TreeNode root) {
         if (root == null) {
             return "";
@@ -15,6 +16,7 @@ public class 从叶结点开始的最小字符串 {
         dfs(root, String.valueOf((char) (root.val + 'a')));
         return res.toString();
     }
+
     private void dfs(TreeNode root, String str) {
         if (root == null) {
             return;

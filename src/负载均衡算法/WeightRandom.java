@@ -12,7 +12,7 @@ public class WeightRandom {
         }
     }
 
-    public static String weightRandom(){
+    public static String weightRandom() {
         Map<String, Integer> addressMap = ServiceMap.IP_ADDRESS_MAP;
         Set<Map.Entry<String, Integer>> entrySet = addressMap.entrySet();
         List<String> list = new ArrayList<>();

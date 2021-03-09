@@ -6,7 +6,7 @@ package 剑指offer;
 //
 //        然后在再次这样指向，但是首先需要保证那个长的链表先执行 N步，然后这两个节点再一次走，直到两个节点相交的时候，就得到了第一个公共节点。
 public class 两个链表的公共结点 {
-     static class ListNode {
+    static class ListNode {
         int val;
         ListNode next;
 
@@ -15,14 +15,14 @@ public class 两个链表的公共结点 {
             next = null;
         }
 
-         @Override
-         public String toString() {
-             return "ListNode{" +
-                     "val=" + val +
-                     ", next=" + next +
-                     '}';
-         }
-     }
+        @Override
+        public String toString() {
+            return "ListNode{" +
+                    "val=" + val +
+                    ", next=" + next +
+                    '}';
+        }
+    }
 
     public static void main(String[] args) {
         ListNode l1 = new ListNode(1);
@@ -48,24 +48,24 @@ public class 两个链表的公共结点 {
     }
 
     public static ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-        if (headA == headB){
+        if (headA == headB) {
             return headA;
         }
 
-        if (headA==null || headB==null){
+        if (headA == null || headB == null) {
             return null;
         }
 
         ListNode a = headA;
         ListNode b = headB;
-        while (a!=null && b!=null){
+        while (a != null && b != null) {
             a = a.next;
             b = b.next;
         }
         // 如果a比较长
-        if (null != a){
+        if (null != a) {
             int k = 0;
-            while (a != null){
+            while (a != null) {
                 a = a.next;
                 k++;
             }
@@ -76,14 +76,14 @@ public class 两个链表的公共结点 {
                 a = a.next;
             }
 
-            while (a != b){
+            while (a != b) {
                 a = a.next;
                 b = b.next;
             }
             return a;
-        }else{
+        } else {
             int k = 0;
-            while (b != null){
+            while (b != null) {
                 b = b.next;
                 k++;
             }
@@ -94,7 +94,7 @@ public class 两个链表的公共结点 {
                 b = b.next;
             }
 
-            while (a != b){
+            while (a != b) {
                 a = a.next;
                 b = b.next;
             }

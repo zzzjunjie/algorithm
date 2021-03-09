@@ -23,14 +23,14 @@ public class 二叉搜索树中第K小的元素 {
 
     public int kthSmallest(TreeNode root, int k) {
         int lCount = findChild(root.left);
-        if (lCount+1 == k){
+        if (lCount + 1 == k) {
             return root.val;
         }
 
-        if (lCount >= k){
-            return kthSmallest(root.left,k);
+        if (lCount >= k) {
+            return kthSmallest(root.left, k);
         }
-        return kthSmallest(root.right,k-lCount - 1);
+        return kthSmallest(root.right, k - lCount - 1);
     }
 
     public int findChild(TreeNode root) {

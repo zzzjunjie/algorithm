@@ -44,7 +44,7 @@ public class 前序遍历构造二叉搜索树 {
     public TreeNode bstFromPreorder(int[] preorder) {
         TreeNode root = null;
         for (int i = 0; i < preorder.length; i++) {
-            root=add(root, preorder[i]);
+            root = add(root, preorder[i]);
         }
         return root;
     }
@@ -54,7 +54,7 @@ public class 前序遍历构造二叉搜索树 {
             return new TreeNode(num);
         }
         if (root.val > num) {
-            root.left=add(root.left, num);
+            root.left = add(root.left, num);
         } else {
             root.right = add(root.right, num);
         }

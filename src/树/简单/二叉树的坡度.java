@@ -6,24 +6,24 @@ import java.util.Map;
 
 public class 二叉树的坡度 {
     int sum = 0;
+
     public int findTilt(TreeNode root) {
-        if (root==null){
+        if (root == null) {
             return 0;
         }
         dfs(root);
         return sum;
     }
 
-    public int dfs(TreeNode root){
-        if (root==null){
+    public int dfs(TreeNode root) {
+        if (root == null) {
             return 0;
         }
         int left = dfs(root.left);
         int right = dfs(root.right);
-        sum = sum +Math.abs(left-right);
-        return left+right + root.val;
+        sum = sum + Math.abs(left - right);
+        return left + right + root.val;
     }
-
 
 
 //    int res = 0;

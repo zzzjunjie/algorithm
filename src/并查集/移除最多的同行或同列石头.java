@@ -9,13 +9,13 @@ public class 移除最多的同行或同列石头 {
         int len = stones.length;
         UnionFind uf = new UnionFind();
         for (int i = 0; i < len; i++) {
-            uf.union(~stones[i][0],stones[i][1]);
+            uf.union(~stones[i][0], stones[i][1]);
         }
         return len - uf.getCount();
     }
 
-    private class UnionFind{
-        private Map<Integer,Integer> map;
+    private class UnionFind {
+        private Map<Integer, Integer> map;
         private int count;
 
         public int getCount() {
@@ -27,27 +27,26 @@ public class 移除最多的同行或同列石头 {
             this.count = 0;
         }
 
-        public int find(int x){
+        public int find(int x) {
             if (!map.containsKey(x)) {
-                map.put(x,x);
+                map.put(x, x);
                 count++;
             }
-            if (map.get(x)!=x){
-                map.put(x,find(map.get(x)));
+            if (map.get(x) != x) {
+                map.put(x, find(map.get(x)));
             }
             return map.get(x);
         }
 
-        public void union(int x,int y){
+        public void union(int x, int y) {
             int fx = find(x);
             int fy = find(y);
-            if (fx!=fy){
-                map.put(map.get(fx),fy);
+            if (fx != fy) {
+                map.put(map.get(fx), fy);
                 count--;
             }
         }
     }
-
 
 
 //    public int removeStones(int[][] stones) {

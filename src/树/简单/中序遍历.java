@@ -13,7 +13,7 @@ public class 中序遍历 {
         inorder(root, vals);
         // 初始化一棵树，将vals中的值全部连接起来并且返回
         TreeNode ans = new TreeNode(0), cur = ans;
-        for (int v: vals) {
+        for (int v : vals) {
             cur.right = new TreeNode(v);
             cur = cur.right;
         }

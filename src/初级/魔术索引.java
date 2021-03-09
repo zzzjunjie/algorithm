@@ -10,19 +10,20 @@ import java.util.Scanner;
  * 如果没有，则返回-1。若有多个魔术索引，返回索引值最小的一个。
  */
 public class 魔术索引 {
-  public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-  }
-  public int findMagicIndex(int[] nums) {
-    for (int i = 0; i < nums.length; i++) {
-      if (i==nums[i]){
-        return i;
-      }
-      if (nums[i]>i){
-        i = nums[i]-1;//抓住序列是有序的这个点
-      }
     }
-    return -1;
-  }
+
+    public int findMagicIndex(int[] nums) {
+        for (int i = 0; i < nums.length; i++) {
+            if (i == nums[i]) {
+                return i;
+            }
+            if (nums[i] > i) {
+                i = nums[i] - 1;//抓住序列是有序的这个点
+            }
+        }
+        return -1;
+    }
 }

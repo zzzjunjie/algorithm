@@ -9,15 +9,15 @@ public class 序列化和反序列化二叉搜索树 {
     public String serialize(TreeNode root) {
         Queue<TreeNode> queue = new LinkedList<>();
         StringBuilder ans = new StringBuilder("");
-        if(root!=null){
+        if (root != null) {
             queue.add(root);
         }
-        while(!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             TreeNode cur = queue.poll();
-            if(cur==null){
+            if (cur == null) {
                 ans.append("N ");
                 continue;
-            }else{
+            } else {
                 ans.append(cur.val).append(" ");
             }
             queue.add(cur.left);
@@ -27,7 +27,7 @@ public class 序列化和反序列化二叉搜索树 {
     }
 
     public TreeNode deserialize(String data) {
-        if(data.equals("")){
+        if (data.equals("")) {
             return null;
         }
         String[] ss = data.split(" ");
@@ -36,19 +36,19 @@ public class 序列化和反序列化二叉搜索树 {
         TreeNode root = new TreeNode(val);
         queue.add(root);
         int i = 1;
-        while(!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             TreeNode node = queue.poll();
-            if(ss[i].equals("N")){
+            if (ss[i].equals("N")) {
                 i++;
-            }else{
+            } else {
                 TreeNode left = new TreeNode(Integer.parseInt(ss[i]));
                 i++;
                 node.left = left;
                 queue.add(left);
             }
-            if(ss[i].equals("N")){
+            if (ss[i].equals("N")) {
                 i++;
-            }else{
+            } else {
                 TreeNode right = new TreeNode(Integer.parseInt(ss[i]));
                 i++;
                 node.right = right;

@@ -6,23 +6,24 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class 二叉树的堂兄弟节点 {
-    Map<Integer,Integer> dep;
-    Map<Integer,TreeNode> par;
+    Map<Integer, Integer> dep;
+    Map<Integer, TreeNode> par;
+
     public boolean isCousins(TreeNode root, int x, int y) {
         dep = new HashMap<>();
         par = new HashMap<>();
-        dfs(root,null);
-        return (par.get(x)!=par.get(y)) && (dep.get(x).equals(dep.get(y)));
+        dfs(root, null);
+        return (par.get(x) != par.get(y)) && (dep.get(x).equals(dep.get(y)));
     }
 
     private void dfs(TreeNode root, TreeNode p) {
-        if (root==null) {
+        if (root == null) {
             return;
         }
-        dep.put(root.val,p==null?1:dep.get(p.val)+1);
-        par.put(root.val,p);
-        dfs(root.left,root);
-        dfs(root.right,root);
+        dep.put(root.val, p == null ? 1 : dep.get(p.val) + 1);
+        par.put(root.val, p);
+        dfs(root.left, root);
+        dfs(root.right, root);
     }
 
     //--------解法2-----------

@@ -25,7 +25,7 @@ public class 重建二叉树 {
         TreeNode root = new TreeNode(pre[preStart]);
         int index = map.get(pre[preStart]);
         root.left = helper(pre, preStart + 1, index - inStart + preStart, in, inStart, index - 1, map);
-        root.right = helper(pre, index - inStart + preStart + 1, preEnd, in, index+1, inEnd, map);
+        root.right = helper(pre, index - inStart + preStart + 1, preEnd, in, index + 1, inEnd, map);
         return root;
     }
 

@@ -17,8 +17,8 @@ public class 二叉树中第二小的节点 {
         int l = myfun(root.left, val);
         int r = myfun(root.right, val);
         if (l > val && r > val) {
-            return Math.min(l,r);
+            return Math.min(l, r);
         }
-        return Math.max(l,r);
+        return Math.max(l, r);
     }
 }

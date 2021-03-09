@@ -4,7 +4,7 @@ import 树.节点.TreeNode;
 
 public class 首个公共祖先 {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        if (root==null) {
+        if (root == null) {
             return null;
         }
 
@@ -14,11 +14,11 @@ public class 首个公共祖先 {
 
         TreeNode left = lowestCommonAncestor(root.left, p, q);
         TreeNode right = lowestCommonAncestor(root.right, p, q);
-        if (left!=null && right != null){
+        if (left != null && right != null) {
             return root;
         }
 
-        if (left!=null){
+        if (left != null) {
             return left;
         }
 

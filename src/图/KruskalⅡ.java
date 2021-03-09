@@ -5,17 +5,17 @@ import java.util.List;
 
 public class KruskalⅡ {
     public static void main(String[] args) {
-        int[][] graph = {{0,16,7,5,6},{16,0,6,9,8},{7,6,0,13,11},{5,9,13,0,4},{6,8,11,4,0}};
+        int[][] graph = {{0, 16, 7, 5, 6}, {16, 0, 6, 9, 8}, {7, 6, 0, 13, 11}, {5, 9, 13, 0, 4}, {6, 8, 11, 4, 0}};
         KruskalⅡ kl = new KruskalⅡ();
-        kl.kruskal(5,graph);
+        kl.kruskal(5, graph);
     }
 
-    public void kruskal(int n,int[][] graph){
+    public void kruskal(int n, int[][] graph) {
         UnionFind uf = new UnionFind(n);
         List<Eage> list = new ArrayList<>();
         for (int i = 0; i < graph.length; i++) {
-            for (int j = i+1; j < graph[0].length; j++) {
-                list.add(new Eage(i,j,graph[i][j]));
+            for (int j = i + 1; j < graph[0].length; j++) {
+                list.add(new Eage(i, j, graph[i][j]));
             }
         }
         // 进行排序
@@ -23,17 +23,17 @@ public class KruskalⅡ {
         int index = 0;
         for (int i = 0; i < list.size(); i++) {
             Eage eage = list.get(i);
-            if (uf.union(eage.getX(), eage.getY())){
-                index ++;
-                System.out.println(eage.getX()+"<------->"+eage.getY()+"====="+eage.getWeight());
+            if (uf.union(eage.getX(), eage.getY())) {
+                index++;
+                System.out.println(eage.getX() + "<------->" + eage.getY() + "=====" + eage.getWeight());
             }
-            if (index == n){
+            if (index == n) {
                 break;
             }
         }
     }
 
-    class UnionFind{
+    class UnionFind {
         private int[] parent;
 
         public UnionFind(int n) {
@@ -43,17 +43,17 @@ public class KruskalⅡ {
             }
         }
 
-        public int find(int x){
-            if (x!=parent[x]){
+        public int find(int x) {
+            if (x != parent[x]) {
                 parent[x] = find(parent[x]);
             }
             return parent[x];
         }
 
-        public boolean union(int x,int y){
+        public boolean union(int x, int y) {
             int fx = find(x);
             int fy = find(y);
-            if (fx == fy){
+            if (fx == fy) {
                 return false;
             }
             parent[fx] = fy;
@@ -61,7 +61,7 @@ public class KruskalⅡ {
         }
     }
 
-    class Eage implements Comparable<Eage>{
+    class Eage implements Comparable<Eage> {
         private int x;
         private int y;
         private int weight;
@@ -98,7 +98,7 @@ public class KruskalⅡ {
 
         @Override
         public int compareTo(Eage o) {
-            return Integer.compare(this.weight,o.weight);
+            return Integer.compare(this.weight, o.weight);
         }
     }
 }

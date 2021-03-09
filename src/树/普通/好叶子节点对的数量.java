@@ -93,23 +93,24 @@ class Pair {
     }
      */
     int cnt = 0;
+
     public int countPairs(TreeNode root, int distance) {
-        dfs(root,distance,0);
+        dfs(root, distance, 0);
         return cnt;
     }
 
     private List<Integer> dfs(TreeNode root, int distance, int level) {
-        if (root==null){
+        if (root == null) {
             return new ArrayList<>();
         }
-        if (root.left==null&&root.right==null){
+        if (root.left == null && root.right == null) {
             return new ArrayList<>(Collections.singletonList(level));
         }
         List<Integer> left = dfs(root.left, distance, level + 1);
         List<Integer> right = dfs(root.right, distance, level + 1);
         for (Integer p : left) {
             for (Integer q : right) {
-                if (p-level+q-level<=distance){
+                if (p - level + q - level <= distance) {
                     cnt++;
                 }
             }

@@ -9,16 +9,17 @@ import java.util.List;
 
 public class N叉树的后序遍历 {
     List<Integer> res = new ArrayList<>();
+
     public List<Integer> postorder(Node root) {
-       dfs(root);
-        if (root!=null){
+        dfs(root);
+        if (root != null) {
             res.add(root.val);
         }
-       return res;
+        return res;
     }
 
-    public void dfs(Node root){
-        if (root==null){
+    public void dfs(Node root) {
+        if (root == null) {
             return;
         }
 

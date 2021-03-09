@@ -6,10 +6,11 @@ public class 冗余连接_II {
     public static void main(String[] args) {
 
         冗余连接_II func = new 冗余连接_II();
-        int[][] param = {{1,2},{2,3},{4,3},{4,1},{1,5}};
+        int[][] param = {{1, 2}, {2, 3}, {4, 3}, {4, 1}, {1, 5}};
         int[] res = func.findRedundantDirectedConnection(param);
         System.out.println(Arrays.toString(res));
     }
+
     public int[] findRedundantDirectedConnection(int[][] edges) {
         int nodesCount = edges.length;
         UnionFind uf = new UnionFind(nodesCount + 1);

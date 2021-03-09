@@ -11,18 +11,19 @@ import java.util.Set;
  */
 public class FindElements {
     Set<Integer> memo = new HashSet<>();
+
     public FindElements(TreeNode root) {
-        dfs(root,0);
+        dfs(root, 0);
     }
 
-    public void dfs(TreeNode root,int val){
-        if (root==null){
+    public void dfs(TreeNode root, int val) {
+        if (root == null) {
             return;
         }
         root.val = val;
         memo.add(val);
-        dfs(root.left,val*2+1);
-        dfs(root.right,val*2+2);
+        dfs(root.left, val * 2 + 1);
+        dfs(root.right, val * 2 + 2);
     }
 
     public boolean find(int target) {

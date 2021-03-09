@@ -29,12 +29,12 @@ package 初级;
  * @date 2020/8/17 0:24
  */
 public class 整数反转 {
-  public static void main(String[] args) {
+    public static void main(String[] args) {
 
-  }
+    }
 
-  public int reverse(int x) {
-    char[] chars = String.valueOf(x).toCharArray();
-    return 0;
-  }
+    public int reverse(int x) {
+        char[] chars = String.valueOf(x).toCharArray();
+        return 0;
+    }
 }

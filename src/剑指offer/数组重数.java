@@ -2,13 +2,13 @@ package 剑指offer;
 
 public class 数组重数 {
     public static int findRepeatNumber(int[] nums) {
-        if (nums.length<0){
+        if (nums.length < 0) {
             return -1;
         }
         for (int i = 0; i < nums.length; i++) {
-            while (nums[i] != i){
+            while (nums[i] != i) {
 
-                if (nums[i] == nums[nums[i]]){
+                if (nums[i] == nums[nums[i]]) {
                     return nums[i];
                 }
 
@@ -22,7 +22,7 @@ public class 数组重数 {
     }
 
     public static void main(String[] args) {
-        int[] arr = {2,3,1,0,2,5,3};
+        int[] arr = {2, 3, 1, 0, 2, 5, 3};
         int repeatNumber = findRepeatNumber(arr);
         System.out.println(repeatNumber);
     }

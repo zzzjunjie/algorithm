@@ -13,13 +13,12 @@ public class 二叉搜索树的最小绝对差 {
         return result;
     }
 
-    private void getMin(TreeNode root){
-        if(root == null){
+    private void getMin(TreeNode root) {
+        if (root == null) {
             return;
         }
         getMin(root.left);
-        if(preNode != null)
-        {
+        if (preNode != null) {
             result = Math.min(Math.abs(root.val - preNode.val), result);
         }
         preNode = root;

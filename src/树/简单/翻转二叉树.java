@@ -21,7 +21,7 @@ public class 翻转二叉树 {
     public TreeNode invertTree2(TreeNode root) {
         if (root == null) return null;
         invertTree(root.left); // 递归找到左节点
-        TreeNode rightNode= root.right; // 保存右节点
+        TreeNode rightNode = root.right; // 保存右节点
         root.right = root.left;
         root.left = rightNode;
         // 递归找到右节点 继续交换 : 因为此时左右节点已经交换了,所以此时的右节点为root.left
@@ -44,15 +44,15 @@ public class 翻转二叉树 {
         if (root == null) return null;
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
-        while (!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             TreeNode node = queue.poll();
             TreeNode rightTree = node.right;
             node.right = node.left;
             node.left = rightTree;
-            if (node.left != null){
+            if (node.left != null) {
                 queue.offer(node.left);
             }
-            if (node.right != null){
+            if (node.right != null) {
                 queue.offer(node.right);
             }
         }

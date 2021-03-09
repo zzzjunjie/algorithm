@@ -1,6 +1,6 @@
 package 剑指offer;
 
- class ListNode {
+class ListNode {
     int val;
     ListNode next;
 
@@ -8,14 +8,15 @@ package 剑指offer;
         val = x;
     }
 
-     @Override
-     public String toString() {
-         return "ListNode{" +
-                 "val=" + val +
-                 ", next=" + next +
-                 '}';
-     }
- }
+    @Override
+    public String toString() {
+        return "ListNode{" +
+                "val=" + val +
+                ", next=" + next +
+                '}';
+    }
+}
+
 public class 反转链表 {
     public static void main(String[] args) {
         ListNode l1 = new ListNode(1);
@@ -31,21 +32,21 @@ public class 反转链表 {
     }
 
     public static ListNode reverseList(ListNode head) {
-        if (head == null){
+        if (head == null) {
             return null;
         }
-        if (head.next == null){
+        if (head.next == null) {
             return head;
         }
         ListNode l = head;
         ListNode m = l.next;
         ListNode r = m.next;
         l.next = null;
-        while (r!=null){
+        while (r != null) {
             m.next = l;
             l = m;
             m = r;
-            r =r.next;
+            r = r.next;
         }
         m.next = l;
         return m;

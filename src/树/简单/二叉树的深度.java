@@ -9,30 +9,30 @@ public class 二叉树的深度 {
     // 解法1：使用BFS进行遍历
     public int maxDepth(TreeNode root) {
         // 根节点为null没有深度
-        if (root==null){
+        if (root == null) {
             return 0;
         }
         // 让根节点入队列
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
         // 创建一个临时队列，用来保存每一层的节点
-        Queue<TreeNode> tmp ;
+        Queue<TreeNode> tmp;
         // 保存深度
         int dep = 0;
         //如果队列不为空则一直循环
-        while (queue.size()>0){
+        while (queue.size() > 0) {
             // 初始化tmp队列
             tmp = new LinkedList<>();
             // 将队列里面所有的左右儿子放入临时队列
             for (TreeNode item : queue) {
-                if (item.left!=null){
+                if (item.left != null) {
                     tmp.offer(item.left);
                 }
-                if (item.right!=null){
+                if (item.right != null) {
                     tmp.offer(item.right);
                 }
             }
-            dep ++;
+            dep++;
             queue = tmp;
         }
         return dep;
@@ -40,7 +40,7 @@ public class 二叉树的深度 {
 
     // 解法2：使用DFS进行遍历
     public int maxDepth2(TreeNode root) {
-        if(root == null) return 0;
+        if (root == null) return 0;
         return Math.max(maxDepth2(root.left), maxDepth2(root.right)) + 1;
     }
 }

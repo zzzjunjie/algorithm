@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public interface ServiceMap {
-    Map<String,Integer> IP_ADDRESS_MAP = new HashMap<String,Integer>(){{
+    Map<String, Integer> IP_ADDRESS_MAP = new HashMap<String, Integer>() {{
         put("192.168.1.100", 1);
         put("192.168.1.101", 1);
 

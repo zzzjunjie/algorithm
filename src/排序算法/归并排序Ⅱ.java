@@ -17,18 +17,18 @@ public class 归并排序Ⅱ {
         int k = 0;
 
         while (l < mid && mid < r) {
-            if (arr[l] < arr[mid]){
+            if (arr[l] < arr[mid]) {
                 tmp[k++] = arr[l++];
-            }else{
+            } else {
                 tmp[k++] = arr[r++];
             }
         }
 
-        while (l<mid){
+        while (l < mid) {
             tmp[k++] = arr[l++];
         }
 
-        while (r < hight){
+        while (r < hight) {
             tmp[k++] = arr[r++];
         }
 

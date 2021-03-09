@@ -4,7 +4,7 @@ public class KMPⅢ {
     public static void main(String[] args) {
         String source = "ABCDEFGDEFG";
         String target = "DEFG";
-        KMP(source,target);
+        KMP(source, target);
     }
 
 
@@ -18,17 +18,17 @@ public class KMPⅢ {
         int q = 0;
         for (int i = 0; i < sourceChars.length; i++) {
 
-            while (q>0 && sourceChars[i] != targetChars[q]){
-                q = init[q-1];
+            while (q > 0 && sourceChars[i] != targetChars[q]) {
+                q = init[q - 1];
             }
 
             if (sourceChars[i] == targetChars[q]) {
                 q++;
             }
 
-            if (q == targetLen){
-                System.out.println("start:"+(i-targetLen+1)+"end:"+i);
-                q=0;
+            if (q == targetLen) {
+                System.out.println("start:" + (i - targetLen + 1) + "end:" + i);
+                q = 0;
             }
         }
 

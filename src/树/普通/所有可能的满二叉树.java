@@ -11,16 +11,16 @@ public class 所有可能的满二叉树 {
     Map<Integer, List<TreeNode>> memo = new HashMap();
 
     public List<TreeNode> allPossibleFBT(int N) {
-        if (memo.containsKey(N)){
+        if (memo.containsKey(N)) {
             return memo.get(N);
         }
         List<TreeNode> list = new ArrayList<>();
-        if (N == 1){
+        if (N == 1) {
             list.add(new TreeNode(0));
             return list;
         }
 
-        if (N % 2 ==1){
+        if (N % 2 == 1) {
             for (int i = 0; i < N; i++) {
                 int j = N - 1 - i;
                 List<TreeNode> left = allPossibleFBT(i);
@@ -35,7 +35,7 @@ public class 所有可能的满二叉树 {
                     }
                 }
             }
-            memo.put(N,list);
+            memo.put(N, list);
         }
         return list;
     }

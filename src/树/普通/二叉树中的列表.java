@@ -11,6 +11,7 @@ public class 二叉树中的列表 {
                 || isSubPath(head, root.left)
                 || isSubPath(head, root.right);
     }
+
     //从根节点开始向下找
     private boolean isSubPathFromRoot(ListNode head, TreeNode root) {
         if (head == null)

@@ -10,26 +10,26 @@ import java.util.Queue;
 public class 二叉树的锯齿形层序遍历 {
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         List<List<Integer>> res = new ArrayList<>();
-        if (root==null) {
+        if (root == null) {
             return res;
         }
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
         boolean flag = true;
-        while (!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             int size = queue.size();
             List<Integer> tmp = new ArrayList<>();
             for (int i = 0; i < size; i++) {
                 TreeNode poll = queue.poll();
-                if (flag){
+                if (flag) {
                     tmp.add(poll.val);
-                }else{
-                    tmp.add(0,poll.val);
+                } else {
+                    tmp.add(0, poll.val);
                 }
-                if (poll.left!=null){
+                if (poll.left != null) {
                     queue.offer(poll.left);
                 }
-                if (poll.right!=null){
+                if (poll.right != null) {
                     queue.offer(poll.right);
                 }
             }

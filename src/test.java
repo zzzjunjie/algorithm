@@ -1,14 +1,22 @@
-import java.util.ArrayDeque;
-import java.util.Deque;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class test {
 
 
     public static void main(String[] args) {
-        Deque<Integer> deque = new ArrayDeque<>();
-        deque.add(1);
-        deque.add(2);
-        System.out.println(deque.poll());
-        System.out.println(deque.poll());
+        Map<Integer,Integer> map = new HashMap<>(2,1);
+        map.put(1,1);
+        map.put(2,2);
+        map.put(3,3);
+        Iterator<Map.Entry<Integer, Integer>> iterator = map.entrySet().iterator();
+        while (iterator.hasNext()) {
+            Map.Entry<Integer, Integer> next = iterator.next();
+            map.put(0,0);
+        }
+
+        new ReentrantLock();
     }
 }

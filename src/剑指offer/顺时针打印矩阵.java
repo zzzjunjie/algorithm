@@ -66,10 +66,14 @@ public class 顺时针打印矩阵 {
         if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
             return new int[0];
         }
-        int rows = matrix.length, columns = matrix[0].length;
+        int rows = matrix.length;
+        int columns = matrix[0].length;
         int[] order = new int[rows * columns];
         int index = 0;
-        int left = 0, right = columns - 1, top = 0, bottom = rows - 1;
+        int left = 0;
+        int right = columns - 1;
+        int top = 0;
+        int bottom = rows - 1;
         while (left <= right && top <= bottom) {
             for (int column = left; column <= right; column++) {
                 order[index++] = matrix[top][column];

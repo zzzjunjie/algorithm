@@ -8,16 +8,16 @@ public class 多数元素 {
         int preCount = 0;
         for (int i = 0; i < nums.length; i++) {
             int num = nums[i];
-            if (preCount>0){
-                if (pre == num){
-                    preCount ++;
-                }else{
-                    preCount --;
+            if (preCount > 0) {
+                if (pre == num) {
+                    preCount++;
+                } else {
+                    preCount--;
                 }
-            }else{
-                if (num == pre){
-                    preCount ++;
-                }else{
+            } else {
+                if (num == pre) {
+                    preCount++;
+                } else {
                     pre = num;
                     preCount++;
                 }
@@ -25,14 +25,14 @@ public class 多数元素 {
         }
 
         // 存在一个众数
-        if (preCount >0){
+        if (preCount > 0) {
             int count = 0;
             for (int num : nums) {
-                if (num == pre){
+                if (num == pre) {
                     count++;
                 }
             }
-            if (count > nums.length/2){
+            if (count > nums.length / 2) {
                 return pre;
             }
         }

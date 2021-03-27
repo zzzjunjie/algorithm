@@ -6,18 +6,19 @@ public class 堆排序Ⅲ {
     static int len;
 
     public static void main(String[] args) {
-        int[] arr = {1,9,6,4,8,2};
+        int[] arr = {1, 9, 6, 4, 8, 2};
         sort(arr);
 
-        while (len >0){
-            swap(arr,len-1,0);
-            len --;
-            bigTree(arr,0);
+        while (len > 0) {
+            swap(arr, len - 1, 0);
+            len--;
+            bigTree(arr, 0);
         }
 
         System.out.println(Arrays.toString(arr));
     }
-    public static void sort(int[] arr){
+
+    public static void sort(int[] arr) {
         len = arr.length;
 
         buildBigTree(arr);
@@ -25,22 +26,22 @@ public class 堆排序Ⅲ {
     }
 
     private static void buildBigTree(int[] arr) {
-        for (int i = len / 2 -1; i >=0 ; i--) {
-            bigTree(arr,i);
+        for (int i = len / 2 - 1; i >= 0; i--) {
+            bigTree(arr, i);
         }
     }
 
     private static void bigTree(int[] arr, int i) {
         int maxIndex = i;
-        if (i * 2 < len && arr[i * 2] > arr[maxIndex]){
+        if (i * 2 < len && arr[i * 2] > arr[maxIndex]) {
             maxIndex = i * 2;
         }
-        if (i * 2 +1 <len && arr[i * 2 +1] >arr[maxIndex]){
-            maxIndex = i * 2 +1;
+        if (i * 2 + 1 < len && arr[i * 2 + 1] > arr[maxIndex]) {
+            maxIndex = i * 2 + 1;
         }
-        if (maxIndex != i){
-            swap(arr,i,maxIndex);
-            bigTree(arr,maxIndex);
+        if (maxIndex != i) {
+            swap(arr, i, maxIndex);
+            bigTree(arr, maxIndex);
         }
     }
 

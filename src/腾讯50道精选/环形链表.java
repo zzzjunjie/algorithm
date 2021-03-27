@@ -17,8 +17,8 @@ public class 环形链表 {
     // 使用set作为缓存，走过的点放入缓存中，如果缓存存在，那么就证明之前的点是走过的，会成环，否则就不为环
     public boolean hasCycle(ListNode head) {
         Set<ListNode> cache = new HashSet<>();
-        while (head!=null){
-            if (cache.contains(head)){
+        while (head != null) {
+            if (cache.contains(head)) {
                 return true;
             }
             cache.add(head);

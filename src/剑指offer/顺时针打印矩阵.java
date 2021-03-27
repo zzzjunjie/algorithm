@@ -53,8 +53,8 @@ public class 顺时针打印矩阵 {
             // 下一列
             int nextCol = col + directions[direction][1];
             // 如果超过边界，就进行下一个方向
-            if (nextRow < 0 || nextRow >= rows || nextCol < 0 || nextCol >= cols || isOk[nextRow][nextCol]){
-                direction = (direction + 1) %4;
+            if (nextRow < 0 || nextRow >= rows || nextCol < 0 || nextCol >= cols || isOk[nextRow][nextCol]) {
+                direction = (direction + 1) % 4;
             }
             row = row + directions[direction][0];
             col = col + directions[direction][1];

@@ -19,17 +19,17 @@ public class 反转链表 {
     }
 
     public ListNode reverseList(ListNode head) {
-        if (head==null){
+        if (head == null) {
             return null;
         }
-        if (head.next == null){
+        if (head.next == null) {
             return head;
         }
         ListNode l = head;
         ListNode m = l.next;
         ListNode r = m.next;
         l.next = null;
-        while (r!=null){
+        while (r != null) {
             m.next = l;
             l = m;
             m = r;

@@ -10,12 +10,13 @@ public final class Utils {
         result[3] = (byte) (i & 0xFF);
         return result;
     }
+
     //字节数组转为int数值
-    public static int bytes2Int(byte[] bytes){
+    public static int bytes2Int(byte[] bytes) {
         int num = bytes[3] & 0xFF;
         num |= ((bytes[2] << 8) & 0xFF00);
         num |= ((bytes[1] << 16) & 0xFF0000);
-        num |= ((bytes[0] << 24)  & 0xFF000000);
+        num |= ((bytes[0] << 24) & 0xFF000000);
         return num;
     }
 }

@@ -1,43 +1,39 @@
 package 腾讯50道精选;
 
 import java.util.Arrays;
-
+// https://leetcode-cn.com/problems/product-of-array-except-self/submissions/
 public class 除自身以外数组的乘积 {
+
 
     public static void main(String[] args) {
         int[] res = {1,2,3,4};
         int[] ints = productExceptSelf(res);
         System.out.println(Arrays.toString(ints));
     }
-
+    // 思路：计算出每个位置除i的前缀乘积、后缀乘积，那么res[i] = pre[i] * suffix[i]
     public static int[] productExceptSelf(int[] nums) {
-        int length = nums.length;
+        int len = nums.length;
 
-        // L 和 R 分别表示左右两侧的乘积列表
-        int[] L = new int[length];
-        int[] R = new int[length];
+        int[] pre = new int[len];
+        int[] suffix = new int[len];
+        int[] res = new int[len];
 
-        int[] answer = new int[length];
+        pre[0] = 1;
+        suffix[len-1] = 1;
 
-        // L[i] 为索引 i 左侧所有元素的乘积
-        // 对于索引为 '0' 的元素，因为左侧没有元素，所以 L[0] = 1
-        L[0] = 1;
-        for (int i = 1; i < length; i++) {
-            L[i] = nums[i - 1] * L[i - 1];
+        // 计算所有除了i的前缀和
+        for (int i = 1; i < pre.length; i++) {
+            pre[i] = pre[i-1] * nums[i-1];
         }
 
-        // R[i] 为索引 i 右侧所有元素的乘积
-        // 对于索引为 'length-1' 的元素，因为右侧没有元素，所以 R[length-1] = 1
-        R[length - 1] = 1;
-        for (int i = length - 2; i >= 0; i--) {
-            R[i] = nums[i + 1] * R[i + 1];
+        for (int i = len-2; i >=0 ; i--) {
+            suffix[i] = suffix[i+1] * nums[i+1];
         }
 
-        // 对于索引 i，除 nums[i] 之外其余各元素的乘积就是左侧所有元素的乘积乘以右侧所有元素的乘积
-        for (int i = 0; i < length; i++) {
-            answer[i] = L[i] * R[i];
+        for (int i = 0; i < res.length; i++) {
+            res[i] = pre[i] * suffix[i];
         }
 
-        return answer;
+        return res;
     }
 }

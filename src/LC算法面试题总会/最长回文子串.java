@@ -13,7 +13,7 @@ public class 最长回文子串 {
         int start = 0;
         for (int i = 0; i < len; i++) {
             for (int j = 0; j <= i; j++) {
-                if (i - j < 2) {
+                if (i - j < 3) {
                     lps[j][i] = chars[j] == chars[i];
                 } else {
                     lps[j][i] = lps[j + 1][i - 1] && (chars[i] == chars[j]);
@@ -56,7 +56,7 @@ public class 最长回文子串 {
 
     public static void main(String[] args) {
         最长回文子串 func = new 最长回文子串();
-        String s = "AKOIOKA";
-        System.out.println(func.getLPS(s));
+        String s = "asdABCBAll";
+        System.out.println(func.longestPalindrome(s));
     }
 }

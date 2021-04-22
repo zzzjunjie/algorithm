@@ -22,6 +22,7 @@ public class TestPoint {
 			}
 		}*/
 
+		// 添加障碍物节点
 		for (int j = 30; j > 15; j--) {
 			barrier.add(new Point(j, 20));
 		}
@@ -30,6 +31,7 @@ public class TestPoint {
 			barrier.add(new Point(j, 50));
 		}
 		*/
+		// 添加障碍物节点
 		for (int i = 20; i < 50; i++) {
 			barrier.add(new Point(30, i));
 		}

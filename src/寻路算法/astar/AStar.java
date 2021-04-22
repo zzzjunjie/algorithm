@@ -128,6 +128,7 @@ public class AStar implements IMove {
 		}
 		String key = point.getKey();
 		if (!barrier.contains(point) && !point.equals(this.currentPoint)) {
+			// 获取目标节点到当前节点的预估代价
 			int hEstimate = this.getGuessLength(point.x, point.y, this.endPoint.x, this.endPoint.y);
 			int totalGCost = this.currentPoint.gCost + gCost;
 			int fTotal = totalGCost + hEstimate;
@@ -165,24 +166,13 @@ public class AStar implements IMove {
 
 	public Point getNearPoint(Point point, Point point2) {
 		if (this.barrier.contains(point)) {
-			nearOutMap = new HashMap<String, Point>();
+			nearOutMap = new HashMap<>();
 			this.endPoint = point;
 			this.toNearPoint(point, point2);
-			List<Point> nearList = new ArrayList<Point>(nearOutMap.values());
-			Collections.sort(nearList, new Comparator<Point>() {
-				@Override
-				public int compare(Point o1, Point o2) {
-					if (o1.gCost > o2.gCost) {
-						return 1;
-					} else if (o1.gCost < o2.gCost) {
-						return -1;
-					} else {
-						return 0;
-					}
-				}
-			});
-			this.openMap = new HashMap<String, Point>();
-			this.closeMap = new HashMap<String, Point>();
+			List<Point> nearList = new ArrayList<>(nearOutMap.values());
+			nearList.sort(Comparator.comparingInt(o -> o.gCost));
+			this.openMap = new HashMap<>();
+			this.closeMap = new HashMap<>();
 			if (nearList.size() > 0) {
 				return nearList.get(0);
 			} else {
@@ -205,21 +195,8 @@ public class AStar implements IMove {
 		this.addNearOpenPoint(new Point(x + 1, y - 1), point2);
 		this.addNearOpenPoint(new Point(x + 1, y + 1), point2);
 		if (this.nearOutMap.size() == 0) {
-			List<Point> list = new ArrayList<Point>(openMap.values());
-			Collections.sort(list, new Comparator<Point>() {
-				@Override
-				public int compare(Point o1, Point o2) {
-					int l1 = o1.gCost;
-					int l2 = o2.gCost;
-					if (l1 > l2) {
-						return 1;
-					} else if (l1 < l2) {
-						return -1;
-					} else {
-						return 0;
-					}
-				}
-			});
+			List<Point> list = new ArrayList<>(openMap.values());
+			list.sort(Comparator.comparingInt(o -> o.gCost));
 			if (list.size() > 0) {
 				Point p = list.get(0);
 				this.closeMap.put(p.getKey(), p);

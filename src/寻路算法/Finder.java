@@ -70,7 +70,7 @@ public abstract class Finder {
 	 * @param from
 	 * @param x
 	 * @param y
-	 * @return
+	 * @return true:可走 false:不可以走
 	 */
 	protected boolean reachable(Node from, int x, int y) {
 		if (!isWalkableAt(from, x, y))

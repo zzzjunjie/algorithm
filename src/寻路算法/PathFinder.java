@@ -29,7 +29,7 @@ public class PathFinder {
 		// 1-map
 //		List<Node> paths = finder.findPath(new Node(1, 39), new Node(99, 65));
 		// 2-map
-		List<Node> paths = finder.findPath(new Node(4, 1), new Node(4, 6));
+		List<Node> paths = finder.findPath(new Node(1, 39), new Node(99, 65));
 		// 3-map
 //		List<Node> paths = finder.findPath(new Node(6, 2), new Node(3, 6));
 		System.out.println(paths);

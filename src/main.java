@@ -27,7 +27,26 @@ public class main {
         return s.substring(start,start+maxLen);
     }
     public static void main(String[] args) {
-        String abcba = longestPalindrome("llkABCBAm");
-        System.out.println(abcba);
+        System.out.println(distance(1,1,5,5));
+    }
+
+    public static int getIndex(int x, int z) {
+        int minX = -(int) Math.floor(z >> 1);
+        if (x < minX) {
+            return -1;
+        }
+        int px = x + z / 2;
+        if (px >= 10) {
+            return -1;
+        }
+        int index = px + z * 10;
+        if (index < 0 || index >= 100) {
+            return -1;
+        }
+        return index;
+    }
+
+    public static int distance(int x, int z, int px, int pz) {
+        return (int) ((Math.abs(x - px) + Math.abs((-x-z) - (-px-pz)) + Math.abs(z - pz)) / 2);
     }
 }

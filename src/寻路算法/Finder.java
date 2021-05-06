@@ -54,10 +54,8 @@ public abstract class Finder {
 	 */
 	protected boolean isWalkableAt(Node node, int x, int y) {
 		// 可行走。还可以加上高度差的判断，这里a*数据里没有高度。
-		if (mapData.isWalkable(x, y) /*&& 高度差符合*/) {
-			return true;
-		}
-		return false;
+		/*&& 高度差符合*/
+		return mapData.isWalkable(x, y);
 	}
 	
 	/**

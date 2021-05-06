@@ -1,5 +1,3 @@
-
-
 public class main {
     public static String longestPalindrome(String s) {
         // 1.将S字符串转换成char数组，方便计算
@@ -27,7 +25,8 @@ public class main {
         return s.substring(start,start+maxLen);
     }
     public static void main(String[] args) {
-        System.out.println(distance(1,1,5,5));
+        System.out.println(10000>>>31);
+        System.out.println(-1000>>>31);
     }
 
     public static int getIndex(int x, int z) {

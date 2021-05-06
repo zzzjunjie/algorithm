@@ -51,7 +51,7 @@ public class JPSFinder extends Finder {
 		return null;
 	}
 
-
+	// 根据跳点遍历跳点附近的邻居，找出下一个跳点到当前点的连线
 	private void identifySuccessors(Node node, Node end) {
 		// 获取当前节点的有效邻接点
 		findNeighbors(node);
@@ -106,7 +106,8 @@ public class JPSFinder extends Finder {
 		if (dx != 0 && dy != 0) {
 			// 与横、纵向探测情况相同，在当前节点（neighbor）的左（或下）侧探测到障碍时，无法直接从母节点（current）纵向走至母节点的上上格（横向走至母节点的右右格），
 			// 而是需先经过当前节点再沿斜对角走至上上格（右右格），这样的障碍也被称为强制邻点。
-			if ((isWalkableAt(neighbor, neighbor.x - dx, neighbor.y + dy)        /**x垂反y水正 可行走*/ && !isWalkableAt(neighbor, neighbor.x - dx, neighbor.y)    /**x垂反y不变 不可行走*/) || (
+			if ((isWalkableAt(neighbor, neighbor.x - dx, neighbor.y + dy)        /**x垂反y水正 可行走*/
+			&& !isWalkableAt(neighbor, neighbor.x - dx, neighbor.y)    /**x垂反y不变 不可行走*/) || (
 					isWalkableAt(neighbor, neighbor.x + dx, neighbor.y - dy)    /**x垂正y水反 可行走*/ && !isWalkableAt(neighbor, neighbor.x, neighbor.y - dy)    /**x不变y水反 不可行走*/)) {
 				return neighbor;
 			}

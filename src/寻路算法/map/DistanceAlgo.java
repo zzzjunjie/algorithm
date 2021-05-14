@@ -3,7 +3,7 @@ package 寻路算法.map;
 import java.util.function.BiFunction;
 
 public class DistanceAlgo {
-	
+
 	public static final int UNIT = 10;
 	public static final int OPPO = 14;
 	/** int型简化计算 */
@@ -32,9 +32,7 @@ public class DistanceAlgo {
     /**
      * 曼哈顿距离，允许斜线走的时候，用
      */
-    public static BiFunction<Integer, Integer, Double> manhattan = (dx, dy) -> {
-        return (double) (Math.abs(dx) + Math.abs(dy));
-    };
+    public static BiFunction<Integer, Integer, Double> manhattan = (dx, dy) -> (double) (Math.abs(dx) + Math.abs(dy));
 
     /**
      * 欧几里得距离

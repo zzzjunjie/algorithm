@@ -16,7 +16,7 @@ public class 为运算表达式设计优先级 {
             char c = input.charAt(i);
             if(c == '+' || c == '-' || c == '*') {  // 出现运算符号，递归求解前半段和后半段。
                 List<Integer> left = diffWaysToCompute(input.substring(0, i));
-                List<Integer> right = diffWaysToCompute(input.substring(i+1, input.length()));
+                List<Integer> right = diffWaysToCompute(input.substring(i+1));
                 // -1   =>  left:[[0]]  right:[[1]]
 
                 for(int l : left) {

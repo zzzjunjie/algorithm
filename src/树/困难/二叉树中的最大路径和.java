@@ -30,34 +30,31 @@ class TreeNode {
 
 
 public class 二叉树中的最大路径和 {
-	int max = 0;
+
+	int max = Integer.MIN_VALUE;
+
 	// K:当前节点的最大值
-	Map<TreeNode,Integer> map = new HashMap<>();
+	Map<TreeNode, Integer> map = new HashMap<>();
 
 	public int maxPathSum(TreeNode root) {
+		max = root.val;
 		dfs(root);
 		return max;
 	}
 
-	private int dfs(TreeNode root){
-		if (root==null){
+	private int dfs(TreeNode root) {
+		if (root == null) {
 			return 0;
 		}
-		if (map.containsKey(root)){
+		if (map.containsKey(root)) {
 			return map.get(root);
 		}
-		int left = dfs(root.left);
-		int right = dfs(root.right);
-		int sum = root.val;
-		if (left >0) {
-			sum +=left;
-		}
-		if (right>0){
-			sum +=right;
-		}
-		max = Math.max(max,sum);
-		map.put(root,sum);
-		return sum;
+		int left = Math.max(0, dfs(root.left));
+		int right = Math.max(0, dfs(root.right));
+		max = Math.max(max, left + right + root.val);
+		int curMax = Math.max(left, right) + root.val;
+		map.put(root, curMax);
+		return curMax;
 	}
 
 }
